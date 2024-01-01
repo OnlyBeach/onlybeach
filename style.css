@@ -1,0 +1,278 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000e24;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    position: relative; /* Add relative positioning for pseudo-element */
+}
+
+.logo img {
+    max-width: 500px;
+}
+
+.logo img, .logo svg {
+    filter: drop-shadow(3 4 190px #002d6a); /* Apply drop-shadow to create a glow effect */
+
+}
+
+.small-logo img {
+    max-width: 120px; /* Adjusted size for the small logo */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden; /* Hide the overflow caused by the ::before pseudo-element */
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 0px; /* Adjust the height of the glow */
+    background: #002d6a; /* Set the background color to the glow color */
+    box-shadow: 0 0 190px #002d6a; /* Add outer glow with the specified color */
+    z-index: -1;
+}
+
+.content {
+    background-color: #020d1e;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    border-bottom: 1px solid #00357b; /* Add a thin line at the bottom with the specified color */
+
+}
+
+.round-container {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset; /* Add outer and inner glow to the header */
+}
+
+.background-video {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.text {
+    color: rgb(202, 225, 255);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 7.304px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.biggest-text {
+    font-size: 62px;
+}
+
+.medium-text {
+    font-size: 34px;
+}
+
+.lines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.line {
+    height: 1px;
+    background-color: white;
+}
+
+.normal-text-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.line-left,
+.line-right {
+    flex: 1;
+    height: 1px;
+    background-color: white;
+}
+
+.line-left {
+    margin-right: 10px; /* Adjust the spacing between the line and text */
+}
+
+.line-right {
+    margin-left: 10px; /* Adjust the spacing between the line and text */
+}
+
+.normal-text {
+    font-size: 23px;
+}
+
+.button-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 150px; /* Add bottom margin to create distance from the footer */
+    z-index: 2;
+    position: relative; /* Add position relative to ensure the button stays above the footer */
+}
+
+.button {
+    display: inline-block;
+    background-color: #03142c;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    padding: 12px 60px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+    background-color: #000e24;
+    box-shadow: 0 0 40px #00306f;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Adjust this line to space-around */
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #020d1e;
+    padding: 20px;
+    z-index: 1;
+    border-top: 1px solid #00357b; /* Add a thin line at the bottom with the specified color */
+    margin-top: 40px; /* Add top margin to create space between button and footer */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Position the social media links on the right side */
+    flex-grow: 1; /* Allow the social media links to take up remaining space */
+    filter: drop-shadow(3 4 190px #002d6a); /* Apply drop-shadow to create a glow effect */
+
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    filter: drop-shadow(3 4 190px #002d6a); /* Apply drop-shadow to create a glow effect */
+
+}
+
+.terms {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left:14%;
+    transform: translateX(-50%);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #00306f;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .biggest-text {
+        font-size: 42px;
+    }
+
+    .medium-text {
+        font-size: 24px;
+    }
+
+    .normal-text {
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 8px 40px;
+    }
+.normal-text-container {
+    position: relative; /* Add relative positioning */
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-icon {
+    margin-left: 10px; /* Adjust the spacing between the price and the icon */
+}
+
+    .small-logo img {
+        max-width: 120px;
+    }
+
+.outline-font {
+    text-shadow: -1px -1px 0 #0070fe,
+                  1px -1px 0 #0070fe,
+                 -1px 1px 0 #0070fe,
+                  1px 1px 0 #0070fe;
+}
+
+    .line-left,
+    .line-right {
+        margin: 0;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+}
