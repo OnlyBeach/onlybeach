@@ -53,5 +53,15 @@
 <a href="mailto:info@example.com" style="color: white;">Contact Us</a>
         </div>
     </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.querySelector('.background-video');
+        video.play().catch(function () {
+            // Autoplay was prevented. You can add a play button or handle it in another way.
+        });
+    });
+</script>
+
 </body>
 </html>
