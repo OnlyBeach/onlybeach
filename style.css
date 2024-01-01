@@ -14,21 +14,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 20px 0;
     position: relative; /* Add relative positioning for pseudo-element */
 }
 
 .logo img {
-    max-width: 500px;
+    max-width: 100%; /* Set the max-width of the logo image to 100% */
+    height: auto; /* Make the logo image height auto */
 }
 
-.logo img, .logo svg {
-    filter: drop-shadow(3 4 190px #002d6a); /* Apply drop-shadow to create a glow effect */
-
+.small-logo {
+    display: flex;
+    justify-content: center; /* Center the small logo */
+    margin-top: 10px; /* Add some space between the small logo and the terms */
 }
 
 .small-logo img {
-    max-width: 120px; /* Adjusted size for the small logo */
+    max-width: 90px; /* Decrease the max-width of the small logo */
 }
 
 .container {
@@ -40,6 +42,7 @@ body {
     margin: 0 auto;
     overflow: hidden; /* Hide the overflow caused by the ::before pseudo-element */
     position: relative;
+    padding: 10px; /* Add some padding to the container */
 }
 
 .container::before {
@@ -60,11 +63,10 @@ body {
     border-radius: 10px;
     padding: 20px;
     position: relative;
-    width: 80%;
-    height: 100%;
+    width: 100%; /* Set the width to 100% */
+    height: auto; /* Make the height auto */
     margin: auto;
     border-bottom: 1px solid #00357b; /* Add a thin line at the bottom with the specified color */
-
 }
 
 .round-container {
@@ -77,7 +79,7 @@ body {
 
 .background-video {
     width: 100%;
-    height: 90%;
+    height: 80vh; /* Set the height of the video to 80vh to make it responsive */
     object-fit: cover;
     opacity: 0.3;
 }
@@ -86,11 +88,11 @@ body {
     color: rgb(202, 225, 255);
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 90px;
+    font-size: 6vw; /* Use vw instead of px for font-size to make it responsive */
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
-    letter-spacing: 7.304px;
+    letter-spacing: 0.8vw; /* Use vw instead of px for letter-spacing to make it responsive */
     text-transform: uppercase;
     position: absolute;
     top: 50%;
@@ -100,29 +102,31 @@ body {
 }
 
 .biggest-text {
-    font-size: 62px;
+    font-size: 4.5vw; /* Use vw instead of px for font-size to make it responsive */
 }
 
 .medium-text {
-    font-size: 34px;
+    font-size: 2.5vw; /* Use vw instead of px for font-size to make it responsive */
 }
 
 .lines {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
+    margin: 2vw 0; /* Use vw instead of px for margin to make it responsive */
 }
 
 .line {
     height: 1px;
     background-color: white;
+    width: 45%; /* Decrease the width of the lines */
 }
 
 .normal-text-container {
     display: flex;
+    flex-wrap: wrap; /* Allow the text to wrap */
     align-items: center;
-    margin-top: 10px;
+    margin-top: 2vw; /* Use vw instead of px for margin-top to make it responsive */
 }
 
 .line-left,
@@ -141,15 +145,19 @@ body {
 }
 
 .normal-text {
-    font-size: 23px;
+    font-size: 1.5vw; /* Use vw instead of px for font-size to make it responsive */
+}
+
+.price-icon {
+    margin-left: 2vw; /* Use vw instead of px for margin-left to make it responsive */
 }
 
 .button-container {
     width: 80%;
     margin: auto;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 150px; /* Add bottom margin to create distance from the footer */
+    margin-top: 5vw; /* Use vw instead of px for margin-top to make it responsive */
+    margin-bottom: 10vh; /* Use vh instead of px to make it responsive */
     z-index: 2;
     position: relative; /* Add position relative to ensure the button stays above the footer */
 }
@@ -161,9 +169,9 @@ body {
     color: white;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 2.5vw; /* Use vw instead of px for font-size to make it responsive */
     text-align: center;
-    padding: 12px 60px;
+    padding: 1vw 4vw; /* Use vw instead of px for padding to make it responsive */
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s, box-shadow 0.3s;
@@ -171,13 +179,14 @@ body {
 
 .button:hover {
     background-color: #000e24;
-    box-shadow: 0 0 40px #00306f;
+    box-shadow: 0 0 4vw #00306f; /* Use vw instead of px for box-shadow to make it responsive */
 }
 
 .footer-container {
     width: 100%;
     display: flex;
-    justify-content: space-around; /* Adjust this line to space-around */
+    flex-direction: column; /* Change the direction of the footer items */
+    justify-content: center; /* Center the footer items */
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -185,38 +194,39 @@ body {
     padding: 20px;
     z-index: 1;
     border-top: 1px solid #00357b; /* Add a thin line at the bottom with the specified color */
-    margin-top: 40px; /* Add top margin to create space between button and footer */
+    margin-top: 5vw; /* Use vw instead of px for margin-top to make it responsive */
 }
 
 .social-icons {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Position the social media links on the right side */
-    flex-grow: 1; /* Allow the social media links to take up remaining space */
-    filter: drop-shadow(3 4 190px #002d6a); /* Apply drop-shadow to create a glow effect */
-
+    justify-content: center; /* Center the social media links */
+    margin-bottom: 1vw; /* Use vw instead of px for margin-bottom to make it responsive */
 }
 
 .social-icons img {
-    width: 25px;
-    height: 25px;
-    margin: 0 5px;
-    filter: drop-shadow(3 4 190px #002d6a); /* Apply drop-shadow to create a glow effect */
-
+    width: 3vw; /* Use vw instead of px for width to make it responsive */
+    height: 3vw; /* Use vw instead of px for height to make it responsive */
+    margin: 0 1vw; /* Use vw instead of px for margin to make it responsive */
+    filter: drop-shadow(0.4vw 0.5vw 3vw #002d6a); /* Use vw instead of px for filter to make it responsive */
 }
 
 .terms {
     color: white;
     font-family: 'Poppins', sans-serif;
-    position: absolute;
-    left:14%;
-    transform: translateX(-50%);
+    font-size: 1.5vw; /* Use vw instead of px for font-size to make it responsive */
+    text-align: center;
+    margin-top: 1.5vw; /* Use vw instead of px for margin-top to make it responsive */
+}
+
+.separator {
+    display: none; /* Hide the separator on small screens */
 }
 
 .footer-link {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 2vw; /* Use vw instead of px for font-size to make it responsive */
     transition: color 0.3s;
 }
 
@@ -225,54 +235,34 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .logo {
+        padding: 10px 0; /* Decrease the padding of the logo */
+    }
+    
+    .logo img {
+        max-width: 200px; /* Set the max-width of the logo image to 200px */
+        max-height: 60px; /* Set the max-height of the logo image to 60px */
+    }
+
     .container {
-        max-width: 90%;
+        max-width: 95%; /* Adjust the max-width of the container */
+        padding: 0; /* Remove the padding of the container */
     }
-
+    
+    .content {
+        padding: 10px; /* Add some padding to the content */
+        width: 100%; /* Set the width to 100% */
+        height: auto; /* Make the height auto */
+    }
+    
+    .text {
+        font-size: 8vw; /* Use vw instead of px for font-size to make it responsive */
+        letter-spacing: 1vw; /* Use vw instead of px for letter-spacing to make it responsive */
+    }
+    
     .biggest-text {
-        font-size: 42px;
+        font-size: 6vw; /* Use vw instead of px for font-size to make it responsive */
     }
-
+    
     .medium-text {
-        font-size: 24px;
-    }
-
-    .normal-text {
-        font-size: 16px;
-    }
-
-    .button {
-        font-size: 12px;
-        padding: 8px 40px;
-    }
-.normal-text-container {
-    position: relative; /* Add relative positioning */
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.price-icon {
-    margin-left: 10px; /* Adjust the spacing between the price and the icon */
-}
-
-    .small-logo img {
-        max-width: 120px;
-    }
-
-.outline-font {
-    text-shadow: -1px -1px 0 #0070fe,
-                  1px -1px 0 #0070fe,
-                 -1px 1px 0 #0070fe,
-                  1px 1px 0 #0070fe;
-}
-
-    .line-left,
-    .line-right {
-        margin: 0;
-    }
-
-    .footer-link {
-        font-size: 14px;
-    }
-}
+        font-size: 4vw; /* Use vw instead of px for font-size to make
