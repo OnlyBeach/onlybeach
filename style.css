@@ -182,6 +182,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #03142c;
+        color: #fff;
+    font-family: 'Poppins', sans-serif;
     padding: 20px;
 }
 
