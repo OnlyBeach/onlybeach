@@ -235,6 +235,14 @@ body {
     font-size: 14px;
     text-decoration: none;
     transition: color 0.3s;
+    
+}
+.footer-links a {
+    color: white;
+}
+
+.footer-links a:hover {
+    color: #0061dc;
 }
 
 .footer-links a:hover {
