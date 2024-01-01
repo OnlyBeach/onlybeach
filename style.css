@@ -118,7 +118,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     margin-top: 2vw;
-    font-size: 1.5vw; /* Decrease the font-size */
+    font-size: 1.5vw;
 }
 
 .line-left,
@@ -129,11 +129,11 @@ body {
 }
 
 .line-left {
-    margin-right: 2vw; /* Decrease the margin */
+    margin-right: 2vw;
 }
 
 .line-right {
-    margin-left: 2vw; /* Decrease the margin */
+    margin-left: 2vw;
 }
 
 .normal-text {
@@ -182,7 +182,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #03142c;
-        color: #fff;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     padding: 20px;
 }
@@ -228,13 +228,13 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    color: #0061dc;
+    color: #fff;
 }
 
 .footer-links a {
-    color: #0061dc;
+    color: #fff;
 }
 
 .footer-links a:hover {
-    color: #0061dc;
+    color: #fff;
 }
