@@ -10,39 +10,30 @@ body {
     margin: 0;
 }
 
+/* Header */
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    position: relative; /* Add relative positioning for pseudo-element */
+    position: relative;
 }
 
 .logo img {
-    max-width: 100%; /* Set the max-width of the logo image to 100% */
-    height: auto; /* Make the logo image height auto */
-}
-
-.small-logo {
-    display: flex;
-    justify-content: center; /* Center the small logo */
-    margin-top: 10px; /* Add some space between the small logo and the terms */
-}
-
-.small-logo img {
-    max-width: 90px; /* Decrease the max-width of the small logo */
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
     max-width: 80%;
     margin: 0 auto;
-    overflow: hidden; /* Hide the overflow caused by the ::before pseudo-element */
+    overflow: hidden;
     position: relative;
-    padding: 10px; /* Add some padding to the container */
+    padding: 10px;
 }
 
 .container::before {
@@ -52,9 +43,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 0px; /* Adjust the height of the glow */
-    background: #002d6a; /* Set the background color to the glow color */
-    box-shadow: 0 0 190px #002d6a; /* Add outer glow with the specified color */
+    height: 0px;
+    background: #002d6a;
+    box-shadow: 0 0 190px #002d6a;
     z-index: -1;
 }
 
@@ -63,10 +54,10 @@ body {
     border-radius: 10px;
     padding: 20px;
     position: relative;
-    width: 100%; /* Set the width to 100% */
-    height: auto; /* Make the height auto */
+    width: 100%;
+    height: auto;
     margin: auto;
-    border-bottom: 1px solid #00357b; /* Add a thin line at the bottom with the specified color */
+    border-bottom: 1px solid #00357b;
 }
 
 .round-container {
@@ -74,12 +65,12 @@ body {
     overflow: hidden;
     position: relative;
     margin: auto;
-    box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset; /* Add outer and inner glow to the header */
+    box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
 }
 
 .background-video {
     width: 100%;
-    height: 80vh; /* Set the height of the video to 80vh to make it responsive */
+    height: 80vh;
     object-fit: cover;
     opacity: 0.3;
 }
@@ -88,11 +79,11 @@ body {
     color: rgb(202, 225, 255);
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 6vw; /* Use vw instead of px for font-size to make it responsive */
+    font-size: 6vw;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
-    letter-spacing: 0.8vw; /* Use vw instead of px for letter-spacing to make it responsive */
+    letter-spacing: 0.8vw;
     text-transform: uppercase;
     position: absolute;
     top: 50%;
@@ -102,31 +93,32 @@ body {
 }
 
 .biggest-text {
-    font-size: 4.5vw; /* Use vw instead of px for font-size to make it responsive */
+    font-size: 4.5vw;
 }
 
 .medium-text {
-    font-size: 2.5vw; /* Use vw instead of px for font-size to make it responsive */
+    font-size: 2.5vw;
 }
 
 .lines {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2vw 0; /* Use vw instead of px for margin to make it responsive */
+    margin: 2vw 0;
 }
 
 .line {
     height: 1px;
     background-color: white;
-    width: 45%; /* Decrease the width of the lines */
+    width: 45%;
 }
 
 .normal-text-container {
     display: flex;
-    flex-wrap: wrap; /* Allow the text to wrap */
+    flex-wrap: wrap;
     align-items: center;
-    margin-top: 2vw; /* Use vw instead of px for margin-top to make it responsive */
+    margin-top: 2vw;
+    font-size: 1.5vw; /* Decrease the font-size */
 }
 
 .line-left,
@@ -137,29 +129,29 @@ body {
 }
 
 .line-left {
-    margin-right: 10px; /* Adjust the spacing between the line and text */
+    margin-right: 2vw; /* Decrease the margin */
 }
 
 .line-right {
-    margin-left: 10px; /* Adjust the spacing between the line and text */
+    margin-left: 2vw; /* Decrease the margin */
 }
 
 .normal-text {
-    font-size: 1.5vw; /* Use vw instead of px for font-size to make it responsive */
+    font-size: 1.5vw;
 }
 
 .price-icon {
-    margin-left: 2vw; /* Use vw instead of px for margin-left to make it responsive */
+    margin-left: 2vw;
 }
 
 .button-container {
     width: 80%;
     margin: auto;
     text-align: center;
-    margin-top: 5vw; /* Use vw instead of px for margin-top to make it responsive */
-    margin-bottom: 10vh; /* Use vh instead of px to make it responsive */
+    margin-top: 5vw;
+    margin-bottom: 10vh;
     z-index: 2;
-    position: relative; /* Add position relative to ensure the button stays above the footer */
+    position: relative;
 }
 
 .button {
@@ -169,9 +161,9 @@ body {
     color: white;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    font-size: 2.5vw; /* Use vw instead of px for font-size to make it responsive */
+    font-size: 2.5vw;
     text-align: center;
-    padding: 1vw 4vw; /* Use vw instead of px for padding to make it responsive */
+    padding: 1vw 4vw;
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s, box-shadow 0.3s;
@@ -179,90 +171,66 @@ body {
 
 .button:hover {
     background-color: #000e24;
-    box-shadow: 0 0 4vw #00306f; /* Use vw instead of px for box-shadow to make it responsive */
+    box-shadow: 0 0 4vw #00306f;
 }
 
+/* Footer */
 .footer-container {
     width: 100%;
     display: flex;
-    flex-direction: column; /* Change the direction of the footer items */
-    justify-content: center; /* Center the footer items */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    background-color: #020d1e;
+    background-color: #03142c;
     padding: 20px;
-    z-index: 1;
-    border-top: 1px solid #00357b; /* Add a thin line at the bottom with the specified color */
-    margin-top: 5vw; /* Use vw instead of px for margin-top to make it responsive */
 }
 
-.social-icons {
+.footer-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-content {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Center the social media links */
-    margin-bottom: 1vw; /* Use vw instead of px for margin-bottom to make it responsive */
-}
-
-.social-icons img {
-    width: 3vw; /* Use vw instead of px for width to make it responsive */
-    height: 3vw; /* Use vw instead of px for height to make it responsive */
-    margin: 0 1vw; /* Use vw instead of px for margin to make it responsive */
-    filter: drop-shadow(0.4vw 0.5vw 3vw #002d6a); /* Use vw instead of px for filter to make it responsive */
-}
-
-.terms {
-    color: white;
+    margin-top: 20px;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw; /* Use vw instead of px for font-size to make it responsive */
-    text-align: center;
-    margin-top: 1.5vw; /* Use vw instead of px for margin-top to make it responsive */
+    font-size: 14px;
 }
 
-.separator {
-    display: none; /* Hide the separator on small screens */
+.footer-content p {
+    margin: 0 10px;
 }
 
-.footer-link {
-    text-decoration: none;
-    color: white;
-    font-size: 2vw; /* Use vw instead of px for font-size to make it responsive */
-    transition: color 0.3s;
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.footer-link:hover {
-    color: #00306f;
+.footer-social a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .logo {
-        padding: 10px 0; /* Decrease the padding of the logo */
-    }
-    
-    .logo img {
-        max-width: 200px; /* Set the max-width of the logo image to 200px */
-        max-height: 60px; /* Set the max-height of the logo image to 60px */
-    }
+.footer-social a:hover {
+    color: #00ff00;
+}
 
-    .container {
-        max-width: 95%; /* Adjust the max-width of the container */
-        padding: 0; /* Remove the padding of the container */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
     }
     
-    .content {
-        padding: 10px; /* Add some padding to the content */
-        width: 100%; /* Set the width to 100% */
-        height: auto; /* Make the height auto */
+    .footer-content {
+        margin-top: 0;
     }
     
-    .text {
-        font-size: 8vw; /* Use vw instead of px for font-size to make it responsive */
-        letter-spacing: 1vw; /* Use vw instead of px for letter-spacing to make it responsive */
+    .footer-social {
+        margin-top: 0;
     }
-    
-    .biggest-text {
-        font-size: 6vw; /* Use vw instead of px for font-size to make it responsive */
-    }
-    
-    .medium-text {
-        font-size: 4vw; /* Use vw instead of px for font-size to make
+}
