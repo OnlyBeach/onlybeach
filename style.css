@@ -228,11 +228,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    color: white;
+    color: #0061dc;
 }
 
 .footer-links a {
-    color: white;
+    color: #0061dc;
 }
 
 .footer-links a:hover {
