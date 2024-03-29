@@ -94,6 +94,32 @@
             background-color: rgba(0, 112, 254, 0.6); /* Same color as the border of the video container */
         }
 
+        /* Video container styles */
+        .round-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Set maximum width for desktop */
+            margin: 0 auto; /* Center align for desktop */
+            overflow: hidden;
+        }
+
+        .background-video {
+            width: 100%; /* Make video container responsive */
+            height: auto; /* Make video container responsive */
+            max-height: 500px; /* Set maximum height for desktop */
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+            padding: 20px;
+        }
+
         @media only screen and (max-width: 768px) {
             .button {
                 padding: 12px 40px; /* Adjust padding for smaller screens */
@@ -106,6 +132,14 @@
 
             .footer-logo img {
                 width: 100%; /* Adjust width for mobile */
+            }
+
+            .background-video {
+                max-height: none; /* Remove maximum height for mobile */
+            }
+
+            .text {
+                padding: 10px; /* Adjust padding for mobile */
             }
         }
     </style>
