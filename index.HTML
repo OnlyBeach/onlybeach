@@ -90,6 +90,12 @@
             justify-content: flex-end;
             padding-right: 20px; /* Adjust as needed */
         }
+
+        /* Logo outside footer */
+        .logo-outside-footer {
+            margin-right: auto; /* Pushes the logo to the left */
+            margin-left: 20px; /* Adjust as needed */
+        }
     </style>
 </head>
 <body>
@@ -121,13 +127,14 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
     <div class="footer-links">
+        <div class="logo-outside-footer">
+            <img src="img/logo.svg" alt="Footer Logo">
+        </div>
         <a href="#terms" class="footer-text">Terms</a>
         <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a> 
     </div>
+
     <div class="footer-container">
-        <div class="footer-logo">
-            <img src="img/logo.svg" alt="Footer Logo">
-        </div>
         <div class="social-icons">
             <a href="https://twitter.com" target="_blank">
                 <img src="img/twitter.svg" alt="Twitter">
