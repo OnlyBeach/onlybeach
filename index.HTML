@@ -97,7 +97,7 @@
         /* Video container styles */
         .round-container {
             position: relative;
-            width: 100%;
+            width: 80%; /* Set width for desktop */
             max-width: 800px; /* Set maximum width for desktop */
             margin: 0 auto; /* Center align for desktop */
             overflow: hidden;
@@ -118,6 +118,7 @@
             color: white;
             z-index: 1;
             padding: 20px;
+            font-size: 1.5rem; /* Adjust font size for mobile */
         }
 
         @media only screen and (max-width: 768px) {
@@ -134,12 +135,17 @@
                 width: 100%; /* Adjust width for mobile */
             }
 
+            .round-container {
+                width: 100%; /* Set width for mobile */
+            }
+
             .background-video {
                 max-height: none; /* Remove maximum height for mobile */
             }
 
             .text {
                 padding: 10px; /* Adjust padding for mobile */
+                font-size: 1.2rem; /* Adjust font size for mobile */
             }
         }
     </style>
