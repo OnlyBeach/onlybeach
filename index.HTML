@@ -40,6 +40,23 @@
             height: auto; /* Maintain aspect ratio */
             z-index: 20; /* Set the z-index */
         }
+
+        /* Second logo styles for footer */
+        .footer-logo img {
+            width: 213px; /* Adjust width as needed */
+            height: 83px; /* Adjust height as needed */
+            z-index: 20; /* Set the z-index */
+        }
+
+        /* Additional CSS */
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
     </style>
 </head>
 <body>
@@ -53,18 +70,17 @@
                     <h1 class="biggest-text">UNFILTERED</h1>
                     <h2 class="medium-text">PARADISE</h2>
                     <div class="lines">
-                     
-                    
-                    <div class="normal-text-container">
-                        <span class="line line-left"></span>
-                        <p class="normal-text">€8.95 + TAX/MO</p>
-                        <span class="line line-right"></span>
+                        <div class="normal-text-container">
+                            <span class="line line-left"></span>
+                            <p class="normal-text">€8.95 + TAX/MO</p>
+                            <span class="line line-right"></span>
+                        </div>
                     </div>
-                </div></div>
-<video class="background-video" loop muted playsinline poster="img/poster.jpg">
-    <source src="img/join.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+                </div>
+                <video class="background-video" loop muted playsinline poster="img/poster.jpg">
+                    <source src="img/join.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
@@ -72,7 +88,9 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
     <div class="footer-container">
-     
+        <div class="footer-logo">
+            <img src="img/logo.svg" alt="Footer Logo">
+        </div>
         <div class="social-icons">
             <a href="https://twitter.com" target="_blank">
                 <img src="img/twitter.svg" alt="Twitter">
@@ -88,14 +106,13 @@
         </div>
     </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var video = document.querySelector('.background-video');
-        video.play().catch(function () {
-            // Autoplay was prevented. You can add a play button or handle it in another way.
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.querySelector('.background-video');
+            video.play().catch(function () {
+                // Autoplay was prevented. You can add a play button or handle it in another way.
+            });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
