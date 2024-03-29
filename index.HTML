@@ -35,6 +35,10 @@
         }
 
         /* Main logo styles */
+        .main-logo {
+            float: left; /* Align logo to the left */
+        }
+
         .main-logo img {
             width: 500px; /* Adjust width as needed */
             z-index: 20; /* Set the z-index */
@@ -70,14 +74,11 @@
             margin-left: 20px; /* Adjust the margin as needed */
         }
 
-        .footer-links {
+        .footer-container {
             display: flex;
             align-items: center;
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            margin-left: 20px;
+            justify-content: space-between;
+            padding: 20px;
         }
 
         .social-icons {
@@ -117,14 +118,12 @@
     </div>
 
     <div class="footer-container">
-        <div class="footer-links">
-            <div class="footer-logo">
-                <img src="img/logo.svg" alt="Footer Logo">
-            </div>
-            <div>
-                <a href="#terms" class="footer-text">Terms</a>
-                <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
-            </div>
+        <div class="footer-logo">
+            <img src="img/logo.svg" alt="Footer Logo">
+        </div>
+        <div>
+            <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
+            <a href="#terms" class="footer-text">Terms</a>
         </div>
     </div>
 
