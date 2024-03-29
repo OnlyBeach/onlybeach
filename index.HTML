@@ -51,7 +51,8 @@
         .footer-container {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between; /* Aligns items to both ends */
+            padding: 20px; /* Adjust padding as needed */
         }
 
         /* Additional CSS */
@@ -74,15 +75,6 @@
             line-height: 135%;
             text-decoration: none;
             cursor: pointer;
-            margin-right: 20px; /* Adjust as needed */
-        }
-
-        /* Align Terms and Contact Us to the right */
-        .footer-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 20px; /* Adjust as needed */
         }
     </style>
 </head>
@@ -114,23 +106,24 @@
     <div class="button-container">
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
+
     <div class="footer-container">
         <div class="footer-logo">
             <img src="img/logo.svg" alt="Footer Logo">
         </div>
-        <a href="#terms" class="footer-text">Terms</a>
-        <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a> 
+        <div>
+            <a href="#terms" class="footer-text">Terms</a>
+            <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
+        </div>
     </div>
 
-    <div class="footer-container">
-        <div class="social-icons">
-            <a href="https://twitter.com" target="_blank">
-                <img src="img/twitter.svg" alt="Twitter">
-            </a>
-            <a href="https://www.youtube.com/@only-beach" target="_blank">
-                <img src="img/youtube.svg" alt="YouTube">
-            </a>
-        </div>
+    <div class="social-icons">
+        <a href="https://twitter.com" target="_blank">
+            <img src="img/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://www.youtube.com/@only-beach" target="_blank">
+            <img src="img/youtube.svg" alt="YouTube">
+        </a>
     </div>
 
     <script>
