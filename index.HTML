@@ -47,7 +47,6 @@
             z-index: 20; /* Set the z-index */
         }
 
-      
         /* Additional CSS */
         * {
             box-sizing: border-box;
@@ -68,6 +67,23 @@
             line-height: 135%;
             text-decoration: none;
             cursor: pointer;
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin-left: 20px;
+        }
+
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
         }
     </style>
 </head>
@@ -100,13 +116,15 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-
-        <div class="footer-logo">
-            <img src="img/logo.svg" alt="Footer Logo">
-        </div>
-        <div>
-            <a href="#terms" class="footer-text">Terms</a>
-            <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
+    <div class="footer-container">
+        <div class="footer-links">
+            <div class="footer-logo">
+                <img src="img/logo.svg" alt="Footer Logo">
+            </div>
+            <div>
+                <a href="#terms" class="footer-text">Terms</a>
+                <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
+            </div>
         </div>
     </div>
 
