@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,6 @@
         .medium-text {
             font-family: 'Poppins', sans-serif;
         }
-    
 
         /* Button styles */
         .button {
@@ -34,7 +33,8 @@
 
         /* Main logo styles */
         .main-logo {
-            float: center; /* Align logo to the left */
+            float: left; /* Align logo to the left */
+            margin-right: 20px; /* Add margin for spacing */
         }
 
         .main-logo img {
@@ -43,10 +43,16 @@
         }
 
         /* Footer logo styles */
+        .footer-logo {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 20; /* Set the z-index */
+        }
+
         .footer-logo img {
             width: 213px; /* Adjust width as needed */
             height: 83px; /* Adjust height as needed */
-            z-index: 20; /* Set the z-index */
         }
 
         /* Additional CSS */
@@ -60,6 +66,15 @@
         }
 
         /* Styles for Terms and Contact Us */
+        .footer-text-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 20; /* Set the z-index */
+            display: flex;
+            align-items: center;
+        }
+
         .footer-text {
             color: rgb(255, 255, 255);
             font-family: 'Poppins', sans-serif;
@@ -73,9 +88,14 @@
         }
 
         .social-icons {
-
+            position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 260px; /* Adjust the left position */
+            z-index: 20; /* Set the z-index */
+        }
+
+        .social-icons a {
+            margin-right: 20px; /* Adjust the margin as needed */
         }
     </style>
 </head>
@@ -108,13 +128,13 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-        <div class="footer-logo">
-            <img src="img/logo.svg" alt="Footer Logo">
-        </div>
-        <div>
-            <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
-            <a href="#terms" class="footer-text">Terms</a>
-        </div>
+    <div class="footer-logo">
+        <img src="img/logo.svg" alt="Footer Logo">
+    </div>
+
+    <div class="footer-text-container">
+        <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
+        <a href="#terms" class="footer-text">Terms</a>
     </div>
 
     <div class="social-icons">
