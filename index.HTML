@@ -3,110 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>ONLY BEACH</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .logo img {
-            max-width: 100%;
-        }
-
-        .round-container {
-            border-radius: 50%;
-            overflow: hidden;
-            position: relative;
-            margin-top: 20px;
-        }
-
-        .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            width: 100%;
-        }
-
-        .biggest-text {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .medium-text {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .lines {
-            border-top: 2px solid white;
-            margin: 0 auto;
-            width: 50%;
-        }
-
-        .normal-text-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .line {
-            flex: 1;
-            height: 2px;
-            background-color: white;
-        }
-
-        .normal-text {
-            margin: 0 10px;
-        }
-
-        .button-container {
-            margin-top: 20px;
-        }
-
-        .button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-        }
-
-        .footer-container {
-            margin-top: 50px;
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-        }
-
-        .social-icons img {
-            width: 40px;
-            margin: 0 10px;
-        }
-
-        .terms {
-            margin-top: 20px;
-        }
-
-        .separator {
-            margin: 0 10px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -118,17 +16,19 @@
                 <div class="text">
                     <h1 class="biggest-text">UNFILTERED</h1>
                     <h2 class="medium-text">PARADISE</h2>
-                    <div class="lines"></div>
+                    <div class="lines">
+                     
+                    
                     <div class="normal-text-container">
                         <span class="line line-left"></span>
                         <p class="normal-text">€8.95 + TAX/MONTH</p>
                         <span class="line line-right"></span>
                     </div>
-                </div>
-                <video class="background-video" loop muted playsinline poster="img/poster.jpg">
-                    <source src="img/join.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                </div></div>
+<video class="background-video" loop muted playsinline poster="img/poster.jpg">
+    <source src="img/join.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             </div>
         </div>
     </div>
@@ -136,6 +36,7 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
     <div class="footer-container">
+     
         <div class="social-icons">
             <a href="https://twitter.com" target="_blank">
                 <img src="img/twitter.svg" alt="Twitter">
@@ -145,19 +46,20 @@
             </a>
         </div>
         <div class="terms">
-            <a href="#terms" style="color: white;">Terms</a>
-            <span class="separator outline-font" style="color: white;">|</span>
-            <a href="mailto:onlybeach4@gmail.com" style="color: white;">Contact Us</a> 
+<a href="#terms" style="color: white;">Terms</a>
+<span class="separator outline-font" style="color: white;">|</span>
+<a href="mailto:onlybeach4@gmail.com" style="color: white;">Contact Us</a> 
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var video = document.querySelector('.background-video');
-            video.play().catch(function () {
-                // Autoplay was prevented. You can add a play button or handle it in another way.
-            });
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.querySelector('.background-video');
+        video.play().catch(function () {
+            // Autoplay was prevented. You can add a play button or handle it in another way.
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
