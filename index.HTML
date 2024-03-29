@@ -69,6 +69,27 @@
             overflow-clip-margin: content-box;
             overflow: clip;
         }
+
+        /* Styles for Terms and Contact Us */
+        .footer-text {
+            color: rgb(255, 255, 255);
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%;
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 20px; /* Adjust as needed */
+        }
+
+        /* Align Terms and Contact Us to the right */
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 20px; /* Adjust as needed */
+        }
     </style>
 </head>
 <body>
@@ -99,6 +120,10 @@
     <div class="button-container">
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
+    <div class="footer-links">
+        <a href="#terms" class="footer-text">Terms</a>
+        <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a> 
+    </div>
     <div class="footer-container">
         <div class="footer-logo">
             <img src="img/logo.svg" alt="Footer Logo">
@@ -110,11 +135,6 @@
             <a href="https://www.youtube.com/@only-beach" target="_blank">
                 <img src="img/youtube.svg" alt="YouTube">
             </a>
-        </div>
-        <div class="terms">
-            <a href="#terms" style="color: white; font-family: 'Poppins', sans-serif;">Terms</a>
-            <span class="separator outline-font" style="color: white;">|</span>
-            <a href="mailto:onlybeach4@gmail.com" style="color: white; font-family: 'Poppins', sans-serif;">Contact Us</a> 
         </div>
     </div>
 
