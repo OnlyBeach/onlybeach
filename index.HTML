@@ -103,11 +103,22 @@
         .copyright {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 260px; /* Adjust the left position */
+            z-index: 20; /* Set the z-index */
             color: rgb(255, 255, 255);
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
-            z-index: 20; /* Set the z-index */
+        }
+
+        /* Line across the screen */
+        .container::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: calc(50% - 1px); /* Adjust line position vertically */
+            border-top: 2px solid rgba(0, 112, 254, 0.6); /* Same color as the border of the video container */
+            z-index: 10; /* Set the z-index */
         }
     </style>
 </head>
