@@ -160,6 +160,20 @@
         <a href="#terms" class="footer-text">Terms</a>
     </div>
 
+
+
+    <div class="footer-line"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.querySelector('.background-video');
+            video.play().catch(function () {
+                // Autoplay was prevented. You can add a play button or handle it in another way.
+            });
+        });
+    </script>
+
+
     <div class="social-icons">
         <a href="https://twitter.com" target="_blank">
             <img src="img/twitter.svg" alt="Twitter">
@@ -173,15 +187,5 @@
         © 2023 Barebeach. All Rights Reserved
     </div>
 
-    <div class="footer-line"></div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var video = document.querySelector('.background-video');
-            video.play().catch(function () {
-                // Autoplay was prevented. You can add a play button or handle it in another way.
-            });
-        });
-    </script>
 </body>
 </html>
