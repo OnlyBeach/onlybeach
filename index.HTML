@@ -126,8 +126,10 @@
         }
 
         .background-video {
-            width: 100%; /* Set video width to fill container */
-            height: auto; /* Allow aspect ratio to be maintained */
+            width: auto;
+            height: 80vh;
+            max-width: none;
+            max-height: none;
             object-fit: cover;
             opacity: 0.3;
             display: block;
@@ -235,13 +237,15 @@
         }
 
         .footer-logo {
+            bottom: -98px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
             width: 150px;
             height: auto;
         }
 
         .footer-logo img {
-            width: 150px;
-            height: auto;
+            width: 233px; /* Adjust the width as needed */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
             margin-left: 20px;
         }
 
@@ -255,7 +259,7 @@
 
         .social-icons {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Change from center to flex-start */
             align-items: center;
             margin-top: 20px;
             margin-left: 20px;
@@ -289,8 +293,33 @@
         @media screen and (min-width: 768px) {
             .rights-reserved {
                 text-align: right;
-                margin-right: 20px; /* Adjust margin-right */
             }
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .footer-link {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: Poppins;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 20px; /* Add margin between links */
+            transition: color 0.3s; /* Add transition effect */
+        }
+
+        .footer-link:hover {
+            color: #0070FE; /* Change color on hover */
         }
     </style>
 </head>
