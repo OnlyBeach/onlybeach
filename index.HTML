@@ -126,10 +126,8 @@
         }
 
         .background-video {
-            width: auto;
-            height: 80vh;
-            max-width: none;
-            max-height: none;
+            width: 100%; /* Set video width to fill container */
+            height: auto; /* Allow aspect ratio to be maintained */
             object-fit: cover;
             opacity: 0.3;
             display: block;
@@ -257,7 +255,7 @@
 
         .social-icons {
             display: flex;
-            justify-content: flex-start; /* Change from center to flex-start */
+            justify-content: center;
             align-items: center;
             margin-top: 20px;
             margin-left: 20px;
@@ -291,33 +289,8 @@
         @media screen and (min-width: 768px) {
             .rights-reserved {
                 text-align: right;
+                margin-right: 20px; /* Adjust margin-right */
             }
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-top: 20px;
-            margin-right: 20px;
-        }
-
-        .footer-link {
-            color: rgb(255, 255, 255);
-            text-align: center;
-            font-family: Poppins;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 135%;
-            text-decoration: none;
-            cursor: pointer;
-            margin-left: 20px; /* Add margin between links */
-            transition: color 0.3s; /* Add transition effect */
-        }
-
-        .footer-link:hover {
-            color: #0070FE; /* Change color on hover */
         }
     </style>
 </head>
@@ -327,28 +300,40 @@
             <img src="img/logo.svg" alt="Main Logo">
         </div>
         <div class="content">
-            <!-- Content goes here -->
+            <div class="round-container">
+                <div class="text">
+                    <h1 class="biggest-text">UNFILTERED</h1>
+                    <h2 class="medium-text">PARADISE</h2>
+                    <div class="lines">
+                        <div class="normal-text-container">
+                            <span class="line line-left"></span>
+                            <p class="normal-text">€8.95 + TAX/MO</p>
+                            <span class="line line-right"></span>
+                            <div class="image-container">
+                                <img src="img/4khdr.svg" alt="4khdr">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <video class="background-video" loop muted playsinline poster="img/poster.jpg">
+                    <source src="img/" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
     <div class="button-container">
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-    <table style="width: 100%;">
-        <tr>
-            <td>
-                <div class="footer-logo">
-                    <img src="img/logo.svg" alt="Footer Logo">
-                </div>
-            </td>
-            <td style="text-align: right;">
-                <div class="footer-links">
-                    <a href="#" class="footer-link">Terms</a>
-                    <a href="#" class="footer-link">Contact Us</a>
-                </div>
-            </td>
-        </tr>
-    </table>
+    <div class="footer-logo">
+        <img src="img/logo.svg" alt="Footer Logo">
+    </div>
+
+    <div class="footer-links">
+        <a href="#" class="footer-link">Terms</a>
+        <a href="#" class="footer-link">Contact Us</a>
+    </div>
 
     <div class="footer-line"></div>
 
