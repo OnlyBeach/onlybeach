@@ -67,10 +67,6 @@
 
         /* Styles for Terms and Contact Us */
         .footer-text-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 20; /* Set the z-index */
             display: flex;
             align-items: center;
         }
@@ -88,23 +84,10 @@
         }
 
         .social-icons {
-            position: fixed;
-            bottom: 100px;
-            left: 260px; /* Adjust the left position */
-            z-index: 20; /* Set the z-index */
-            display: flex;
-            align-items: center;
-        }
-
-        .social-icons a {
-            margin-right: 20px; /* Adjust the margin as needed */
+            display: none; /* Hide social icons */
         }
 
         .copyright {
-            position: fixed;
-            bottom: 80px;
-            left: 260px; /* Adjust the left position */
-            z-index: 20; /* Set the z-index */
             color: rgb(255, 255, 255);
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
@@ -113,13 +96,40 @@
         /* Line across the screen */
         .footer-line {
             position: fixed;
-            bottom: 65px; /* Adjust the position as needed */
+            bottom: 0;
             left: 0;
             width: 100%;
             height: 1px;
             background-color: rgba(0, 112, 254, 0.6); /* Same color as the border of the video container */
             z-index: 10; /* Set the z-index */
         }
+
+        /* Adjustments for footer alignment */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-center {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-right {
+            flex: 1;
+            text-align: right;
+        }
+
     </style>
 </head>
 <body>
@@ -151,16 +161,26 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-    <div class="footer-logo">
-        <img src="img/logo.svg" alt="Footer Logo">
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="img/logo.svg" alt="Footer Logo">
+            </div>
+        </div>
+        
+        <div class="footer-center">
+            <div class="copyright">
+                © 2023 Barebeach. All Rights Reserved
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-text-container">
+                <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
+                <a href="#terms" class="footer-text">Terms</a>
+            </div>
+        </div>
     </div>
-
-    <div class="footer-text-container">
-        <a href="mailto:onlybeach4@gmail.com" class="footer-text">Contact Us</a>
-        <a href="#terms" class="footer-text">Terms</a>
-    </div>
-
-
 
     <div class="footer-line"></div>
 
@@ -172,20 +192,6 @@
             });
         });
     </script>
-
-
-    <div class="social-icons">
-        <a href="https://twitter.com" target="_blank">
-            <img src="img/twitter.svg" alt="Twitter">
-        </a>
-        <a href="https://www.youtube.com/@only-beach" target="_blank">
-            <img src="img/youtube.svg" alt="YouTube">
-        </a>
-    </div>
-
-    <div class="copyright">
-        © 2023 Barebeach. All Rights Reserved
-    </div>
 
 </body>
 </html>
