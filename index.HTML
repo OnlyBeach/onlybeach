@@ -33,16 +33,14 @@
 
         /* Main logo styles */
         .main-logo {
-            float: left;
+            text-align: center;
             margin-top: 20px;
-            margin-right: 10px;
-            max-width: 120px;
         }
 
-        @media (min-width: 768px) {
-            .main-logo {
-                width: 500px;
-            }
+        .main-logo img {
+            max-width: 100%;
+            height: auto;
+            width: 200px; /* Adjust size as needed */
         }
 
         body {
@@ -233,20 +231,20 @@
         }
 
         .footer-left {
-            flex: 1 1 100%;
-            text-align: center;
+            flex: 1;
+            text-align: left; /* Adjust alignment */
+            padding-left: 20px; /* Add left padding for better alignment */
         }
 
         .footer-center {
-            flex: 1 1 100%;
+            flex: 1;
             text-align: center;
-            margin-top: 10px;
         }
 
         .footer-right {
-            flex: 1 1 100%;
-            text-align: center;
-            margin-top: 10px;
+            flex: 1;
+            text-align: right;
+            padding-right: 20px; /* Add right padding for better alignment */
         }
 
         .footer-logo {
@@ -281,7 +279,6 @@
 
         .footer-text a {
             color: rgb(255, 255, 255);
-            text-align: center;
             font-family: Poppins;
             font-size: 22px;
             font-style: normal;
