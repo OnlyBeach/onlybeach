@@ -36,8 +36,23 @@
             float: left; /* Align logo to the left */
             margin-top: 90px;
             margin-right: 20px; /* Add margin for spacing */
+            max-width: 100%; /* Ensure logo does not exceed container width */
         }
 
+        .main-logo img {
+            width: 500px; /* Adjust width as needed */
+            z-index: 20; /* Set the z-index */
+        }
+
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .main-logo {
+                margin-top: 20px; /* Adjust margin for smaller screens */
+            }
+
+            .main-logo img {
+                width: 300px; /* Adjust width for smaller screens */
+            }
+        }
 
 {
     margin: 0;
@@ -279,72 +294,6 @@ body {
     color: #fff;
 }
 
-
-        .main-logo img {
-            width: 500px; /* Adjust width as needed */
-            z-index: 20; /* Set the z-index */
-        }
-
-        /* Footer logo styles */
-        .footer-logo {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 40; /* Set the z-index higher than the footer line */
-        }
-
-        .footer-logo img {
-            width: 213px; /* Adjust width as needed */
-            height: 83px; /* Adjust height as needed */
-        }
-
-        /* Additional CSS */
-        * {
-            box-sizing: border-box;
-        }
-
-        img {
-            overflow-clip-margin: content-box;
-            overflow: clip;
-        }
-
-        /* Styles for Terms and Contact Us */
-        .footer-text-container {
-            display: inline-block; /* Display inline-block to control spacing */
-        }
-
-        .footer-text {
-            color: rgb(255, 255, 255);
-            font-family: 'Poppins', sans-serif;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 135%;
-            text-decoration: none;
-            cursor: pointer;
-            margin-left: 20px; /* Adjust the margin as needed */
-        }
-
-        .social-icons {
-            display: none; /* Hide social icons */
-        }
-
-        .copyright {
-            color: rgb(255, 255, 255);
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-        }
-
-        /* Line across the screen */
-        .footer-line {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px; /* Adjusted height for better visibility */
-            background-color: rgba(0, 112, 254, 0.6); /* Same color as the border of the video container */
-            z-index: 30; /* Set the z-index higher than other elements */
-        }
 
         /* Adjustments for footer alignment */
 .footer {
