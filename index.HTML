@@ -32,24 +32,24 @@
         }
 
         /* Main logo styles */
-.main-logo {
-    text-align: center;
-    margin-top: 50px; /* Added padding from the top */
-margin-bottom: 20px;
-}
+        .main-logo {
+            text-align: center;
+            margin-top: 50px; /* Added padding from the top */
+            margin-bottom: 20px;
+        }
 
-.main-logo img {
-    max-width: 100%;
-    height: auto;
-    width: 500px; /* Adjusted logo size */
-}
+        .main-logo img {
+            max-width: 100%;
+            height: auto;
+            width: 500px; /* Adjusted logo size */
+        }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .main-logo img {
-        width: 80%; /* Adjust as needed for smaller screens */
-    }
-}
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .main-logo img {
+                width: 80%; /* Adjust as needed for smaller screens */
+            }
+        }
 
         body {
             background-color: #000e24;
@@ -70,26 +70,27 @@ margin-bottom: 20px;
             height: auto;
         }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 70vh;
-    width: 70%; /* Initial width */
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    padding: 10px;
-    padding-right: 37px;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 70vh;
+            width: 70%; /* Initial width */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            padding-right: 37px;
+        }
 
-@media screen and (max-width: 768px) {
-    .container {
-        width: 100%; /* Adjust to occupy full width on smaller screens */
-        padding: 10px; /* Adjust padding if needed */
-        justify-content: center; /* Center content vertically */
-    }
-}
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%; /* Adjust to occupy full width on smaller screens */
+                padding: 10px; /* Adjust padding if needed */
+                justify-content: center; /* Center content vertically */
+            }
+        }
+
         .container::before {
             content: "";
             position: absolute;
@@ -113,26 +114,27 @@ margin-bottom: 20px;
             margin: auto;
             border-bottom: 1px solid #00357b;
         }
-.round-container {
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    margin: auto;
-    box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
-    max-width: 100%; /* Ensure the container adjusts to the viewport */
-    height: auto; /* Allow the container to adjust its height based on content */
-}
 
-.background-video {
-    width: auto;
-    height: 80vh;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    opacity: 0.3;
-    display: block;
-    margin: 0 auto;
-}
+        .round-container {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
+            max-width: 100%; /* Ensure the container adjusts to the viewport */
+            height: auto; /* Allow the container to adjust its height based on content */
+        }
+
+        .background-video {
+            width: auto;
+            height: 80vh;
+            max-width: none;
+            max-height: none;
+            object-fit: cover;
+            opacity: 0.3;
+            display: block;
+            margin: 0 auto;
+        }
 
         .text {
             color: rgb(202, 225, 255);
@@ -171,14 +173,15 @@ margin-bottom: 20px;
             background-color: white;
             width: 45%;
         }
-.normal-text-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; /* Add this line to horizontally center content */
-    margin-top: 2vw;
-    font-size: 1.5vw;
-}
+
+        .normal-text-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; /* Add this line to horizontally center content */
+            margin-top: 2vw;
+            font-size: 1.5vw;
+        }
 
         .line-left,
         .line-right {
@@ -233,6 +236,15 @@ margin-bottom: 20px;
             box-shadow: 0 0 4vw #00306f;
         }
 
+        .footer-logo {
+            position: fixed;
+            bottom: 0;
+            left: 20px; /* Adjust as needed */
+            width: 213px;
+            z-index: 20;
+            height: 83px;
+        }
+
         /* Footer */
         .footer-line {
             position: fixed;
@@ -275,6 +287,10 @@ margin-bottom: 20px;
     </div>
     <div class="button-container">
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
+    </div>
+
+    <div class="footer-logo">
+        <img src="img/footer-logo.svg" alt="Footer Logo">
     </div>
 
     <div class="footer-line"></div>
