@@ -266,15 +266,15 @@ margin-left: 20px;
 }
 
 .social-icons img {
-    height: 30px; /* Increase the size of the icons */
-    width: auto; /* Ensure the width adjusts proportionally */
+    height: 17px;
+    object-fit: contain;
     margin: 0 10px; /* Adjust margin as needed */
-    border-radius: 50%; /* Make the images round */
-    transition: box-shadow 0.3s; /* Add transition effect for the glow */
+    transition: filter 0.3s; /* Add transition effect */
+    filter: brightness(0.8); /* Initial brightness */
 }
 
 .social-icons img:hover {
-    box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.7); /* Add glowing effect on hover */
+    filter: brightness(1.2); /* Increase brightness on hover */
 }
     </style>
 </head>
