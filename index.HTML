@@ -290,6 +290,12 @@ margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
 }
+.social-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+}
     </style>
 </head>
 <body>
@@ -330,13 +336,14 @@ margin-left: 20px;
 
     <div class="footer-line"></div>
 
-    <div class="social-icons">
-        <img src="img/youtube.svg" alt="YouTube">
-        <img src="img/twitter.svg" alt="Twitter">
+    <div class="social-container">
+        <div class="social-icons">
+            <img src="img/youtube.svg" alt="YouTube">
+            <img src="img/twitter.svg" alt="Twitter">
+        </div>
+        <div class="copyright">© 2024 Onlybeach. All Rights Reserved</div>
     </div>
     
-    <div class="copyright">© 2024 Onlybeach. All Rights Reserved</div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var video = document.querySelector('.background-video');
