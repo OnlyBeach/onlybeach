@@ -32,16 +32,23 @@
         }
 
         /* Main logo styles */
-        .main-logo {
-            text-align: center;
-            margin-top: 20px;
-        }
+       .main-logo {
+    text-align: center;
+    margin-top: 20px;
+}
 
-        .main-logo img {
-            max-width: 100%;
-            height: auto;
-            width: 200px; /* Adjust size as needed */
-        }
+.main-logo img {
+    width: 500px; /* Default width for desktop */
+    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .main-logo img {
+        width: 80%; /* Adjust as needed for smaller screens */
+    }
+}
 
         body {
             background-color: #000e24;
