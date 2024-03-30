@@ -107,13 +107,15 @@
     height: auto; /* Allow the container to adjust its height based on content */
 }
 
-    .background-video {
-    width: 100%;
-    height: auto; /* Adjusted to maintain aspect ratio */
-    max-height: 80vh; /* Adjusted maximum height */
-    display: block; /* Ensures the video scales properly */
-    margin: 0 auto; /* Centers the video horizontally */
+.background-video {
+    width: auto;
+    height: 80vh;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
     opacity: 0.3;
+    display: block;
+    margin: 0 auto;
 }
 
         .text {
