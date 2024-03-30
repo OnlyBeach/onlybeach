@@ -117,8 +117,7 @@
     align-items: center;
     padding: 10px 20px; /* Add padding for better spacing */
     z-index: 1000; /* Set a high z-index to ensure it stays on top of other elements */
-border-top: 2px solid rgba(0, 112, 254, 0.6); /* Add blue border line at the top */
-
+    border-top: 2px solid rgba(0, 112, 254, 0.6); /* Add blue border line at the top */
 }
 
         .footer-left {
@@ -133,6 +132,12 @@ border-top: 2px solid rgba(0, 112, 254, 0.6); /* Add blue border line at the top
         .footer-right {
             flex: 1;
             text-align: right;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Adjust margin-top as needed */
         }
 
     </style>
@@ -152,7 +157,9 @@ border-top: 2px solid rgba(0, 112, 254, 0.6); /* Add blue border line at the top
                             <span class="line line-left"></span>
                             <p class="normal-text">€8.95 + TAX/MO</p>
                             <span class="line line-right"></span>
-<img src="img/4khdr.svg" alt="4khdr">
+                            <div class="image-container">
+                                <img src="img/4khdr.svg" alt="4khdr">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,7 +174,7 @@ border-top: 2px solid rgba(0, 112, 254, 0.6); /* Add blue border line at the top
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-  <div class="footer-line"></div>
+    <div class="footer-line"></div>
 
     <div class="footer">
         <div class="footer-left">
