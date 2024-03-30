@@ -34,34 +34,17 @@
         /* Main logo styles */
 .main-logo {
     text-align: center;
-    margin-top: 50px; /* Added padding from the top */
-    margin-bottom: 20px; /* Added margin from the video container */
-    position: relative; /* Required for positioning pseudo-element */
+    margin-top: 50px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
+    position: relative;
 }
 
-.main-logo::after {
-    content: "";
-    position: absolute;
-    top: -20px; /* Adjust position as needed */
-    left: -20px; /* Adjust position as needed */
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: rgba(0, 168, 255, 0.5); /* Bright bluish color with transparency */
-    animation: spread 2s ease-out infinite; /* Animation to make the light spread */
+.main-logo img {
+    max-width: 100%;
+    height: auto;
+    width: 200px; /* Adjust size as needed */
+    box-shadow: 0 0 20px 10px rgba(0, 168, 255, 0.7); /* Adjust the color and size of the glow */
 }
-
-@keyframes spread {
-    0% {
-        transform: scale(0.5); /* Initial scale */
-        opacity: 1; /* Initial opacity */
-    }
-    100% {
-        transform: scale(2); /* Final scale */
-        opacity: 0; /* Final opacity */
-    }
-}
-
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .main-logo img {
