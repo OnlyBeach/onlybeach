@@ -14,17 +14,11 @@
 
 
 .footer-container {
-    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: center; /* Vertically center items */
     padding: 20px 0;
     box-sizing: border-box;
-}
-
-.footer-table {
-    width: 100%;
-}
-
-.footer-table td {
-    vertical-align: middle;
 }
 
 .footer-logo img {
@@ -32,16 +26,30 @@
     height: auto;
 }
 
+.footer-table {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-table-cell {
+    display: flex;
+    align-items: center;
+}
+
 .footer-links {
-    text-align: right;
+    margin-left: auto; /* Push links to the right */
 }
 
 .footer-link {
-    color: #ffffff;
-    font-family: Poppins;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
     font-size: 22px;
+    font-style: normal;
     font-weight: 500;
+    line-height: 135%;
     text-decoration: none;
+    cursor: pointer;
     margin-left: 20px;
     transition: color 0.3s;
 }
@@ -218,18 +226,16 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-    <div class="footer-container">
-    <table class="footer-table">
-        <tr>
-            <td class="footer-logo">
-                <img src="img/logo.svg" alt="Footer Logo">
-            </td>
-            <td class="footer-links">
-                <a href="#" class="footer-link">Terms</a>
-                <a href="#" class="footer-link">Contact Us</a>
-            </td>
-        </tr>
-    </table>
+  <div class="footer-container">
+    <div class="footer-table">
+        <div class="footer-table-cell footer-logo">
+            <img src="img/logo.svg" alt="Footer Logo">
+        </div>
+        <div class="footer-table-cell footer-links">
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Contact Us</a>
+        </div>
+    </div>
 </div>
 
     <div class="footer-line"></div>
