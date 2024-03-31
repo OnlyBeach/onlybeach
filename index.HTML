@@ -54,18 +54,15 @@
 
         /* Container */
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 70vh;
-            width: 70%; /* Initial width */
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-            padding: 10px;
-            padding-right: 37px;
-        }
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Set width to 100% */
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
         @media screen and (max-width: 768px) {
             .container {
                 width: 100%; /* Adjust to occupy full width on smaller screens */
