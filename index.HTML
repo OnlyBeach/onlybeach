@@ -53,15 +53,16 @@
         }
 
         /* Container */
-        .container {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Set width to 100% */
+    width: 100%;
+    max-width: 90%; /* Set maximum width to prevent overflowing the screen */
     padding: 10px;
     overflow: hidden;
     position: relative;
-    box-sizing: border-box; /* Include padding in the width calculation */
+    box-sizing: border-box;
 }
         @media screen and (max-width: 768px) {
             .container {
