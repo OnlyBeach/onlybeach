@@ -30,7 +30,7 @@
         }
 
         .footer-links {
-            text-align: right;
+            text-align: left; /* Adjusted to left */
         }
 
         .footer-link {
@@ -42,33 +42,12 @@
             line-height: 135%;
             text-decoration: none;
             cursor: pointer;
-            margin-left: 20px;
+            margin-right: 20px; /* Adjusted from margin-left to margin-right */
             transition: color 0.3s;
         }
 
         .footer-link:hover {
             color: #0070FE;
-        }
-
-        /* Button styles */
-        .button {
-            display: inline-block;
-            padding: 15px 60px;
-            border-radius: 10px;
-            box-shadow: rgba(0, 112, 254, 0.6) 0px 3px 80px;
-            background: rgb(3, 11, 24);
-            border: none;
-            outline: none;
-            cursor: pointer;
-            text-decoration: none;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 22px;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #0070FE;
         }
 
         /* Your existing CSS styles */
@@ -77,6 +56,22 @@
         }
 
         .medium-text {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .button {
+            display: inline-flex;
+            padding: 15px 60px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: rgba(0, 112, 254, 0.6) 0px 3px 80px;
+            background: rgb(3, 11, 24);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -117,8 +112,8 @@
         }
 
         .footer-links {
-            text-align: right;
-            padding-right: 20px;
+            text-align: right; /* Adjusted to right */
+            padding-right: 20px; /* Adjusted from padding-left to padding-right */
         }
 
         .footer-link {
@@ -225,12 +220,12 @@
 
     <div class="footer-container">
         <div class="footer-table">
-            <div class="footer-table-cell footer-logo">
-                <img src="img/logo.svg" alt="Footer Logo">
-            </div>
             <div class="footer-table-cell footer-links">
                 <a href="#" class="footer-link">Terms</a>
                 <a href="#" class="footer-link">Contact Us</a>
+            </div>
+            <div class="footer-table-cell footer-logo">
+                <img src="img/logo.svg" alt="Footer Logo">
             </div>
         </div>
     </div>
