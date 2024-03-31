@@ -3,101 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>ONLY BEACH</title>
     <style>
+        .biggest-text {
+            font-family: 'Poppins', sans-serif;
+        }
+        .medium-text {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-flex;
+            padding: 15px 60px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: rgba(0, 112, 254, 0.6) 0px 3px 80px;
+            background: rgb(3, 11, 24);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Main logo styles */
+        .main-logo {
+            text-align: center;
+            margin-top: 50px; /* Added padding from the top */
+            margin-bottom: 20px;
+        }
+
+        .main-logo img {
+            max-width: 100%;
+            height: auto;
+            width: 500px; /* Adjusted logo size */
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .main-logo img {
+                width: 80%; /* Adjust as needed for smaller screens */
+            }
+        }
+
         body {
             background-color: #000e24;
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: white;
+        }
+
+        /* Header */
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            min-height: 70vh;
+            width: 70%; /* Initial width */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            padding-right: 37px;
         }
 
-        .main-logo {
-            margin-top: 50px;
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%; /* Adjust to occupy full width on smaller screens */
+                padding: 10px; /* Adjust padding if needed */
+                justify-content: center; /* Center content vertically */
+            }
         }
 
-        .main-logo img {
-            max-width: 100%;
-            height: auto;
-            width: 500px;
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 0px;
+            background: #002d6a;
+            box-shadow: 0 0 190px #002d6a;
+            z-index: -1;
         }
 
         .content {
             background-color: #020d1e;
             border-radius: 10px;
             padding: 20px;
+            position: relative;
             width: 100%;
-            max-width: 800px;
-            margin-top: 20px;
+            height: 70%;
+            margin: auto;
+            border-bottom: 1px solid #00357b;
         }
 
-        .footer {
+        .round-container {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
+            max-width: 100%; /* Ensure the container adjusts to the viewport */
+            height: auto; /* Allow the container to adjust its height based on content */
+        }
+
+        .background-video {
+            width: auto;
+            height: 80vh;
+            max-width: none;
+            max-height: none;
+            object-fit: cover;
+            opacity: 0.3;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text {
+            color: rgb(202, 225, 255);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 6vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: 0.8vw;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .biggest-text {
+            font-size: 4.5vw;
+        }
+
+        .medium-text {
+            font-size: 2.5vw;
+        }
+
+        .lines {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
-            padding: 0 20px;
+            margin: 2vw 0;
+        }
+
+        .line {
+            height: 1px;
+            background-color: white;
+            width: 45%;
+        }
+
+        .normal-text-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; /* Add this line to horizontally center content */
+            margin-top: 2vw;
+            font-size: 1.5vw;
+        }
+
+        .line-left,
+        .line-right {
+            flex: 1;
+            height: 1px;
+            background-color: white;
+        }
+
+        .line-left {
+            margin-right: 2vw;
+        }
+
+        .line-right {
+            margin-left: 2vw;
+        }
+
+        .normal-text {
+            font-size: 1.5vw;
+        }
+
+        .price-icon {
+            margin-left: 2vw;
+        }
+
+        .button-container {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            margin-top: 5vw;
+            margin-bottom: 10vh;
+            z-index: 2;
+            position: relative;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #03142c;
+            border: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5vw;
+            text-align: center;
+            padding: 1vw 4vw;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            background-color: #000e24;
+            box-shadow: 0 0 4vw #00306f;
         }
 
         .footer-logo {
+            bottom: -98px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
             width: 150px;
             height: auto;
         }
 
         .footer-logo img {
-            width: 100%;
-            height: auto;
-        }
-
-        .footer-links {
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-link {
-            color: rgb(255, 255, 255);
-            font-size: 18px;
-            text-decoration: none;
+            width: 233px; /* Adjust the width as needed */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
             margin-left: 20px;
-            transition: color 0.3s;
-        }
-
-        .footer-link:hover {
-            color: #0070FE;
         }
 
         .footer-line {
+            position: relative;
             width: 100%;
             height: 2px;
             background-color: rgba(0, 112, 254, 0.6);
-            margin-top: 20px;
+            z-index: 30;
         }
 
         .social-icons {
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-start; /* Change from center to flex-start */
             align-items: center;
             margin-top: 20px;
+            margin-left: 20px;
         }
 
         .social-icons img {
-            height: 20px;
-            margin-right: 10px;
+            height: 17px;
+            object-fit: contain;
+            margin: 0 10px; /* Adjust margin as needed */
+            transition: filter 0.3s; /* Add transition effect */
+            filter: brightness(0.8); /* Initial brightness */
+        }
+
+        .social-icons img:hover {
+            filter: brightness(1.2); /* Increase brightness on hover */
         }
 
         .rights-reserved {
             text-align: center;
-            margin-top: 20px;
+            color: rgb(183, 195, 209);
+            font-family: Rubik;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            z-index: 20;
             opacity: 0.7;
+            padding-left: 20px; /* Add padding-left */
+        }
+
+        @media screen and (min-width: 768px) {
+            .rights-reserved {
+                text-align: right;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .footer-link {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: Poppins;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 20px; /* Add margin between links */
+            transition: color 0.3s; /* Add transition effect */
+        }
+
+        .footer-link:hover {
+            color: #0070FE; /* Change color on hover */
         }
     </style>
 </head>
@@ -107,39 +329,39 @@
             <img src="img/logo.svg" alt="Main Logo">
         </div>
         <div class="content">
-            <div class="text">
-                <h1 class="biggest-text">UNFILTERED</h1>
-                <h2 class="medium-text">PARADISE</h2>
-                <div class="lines">
-                    <div class="normal-text-container">
-                        <span class="line line-left"></span>
-                        <p class="normal-text">€8.95 + TAX/MO</p>
-                        <span class="line line-right"></span>
-                        <div class="image-container">
-                            <img src="img/4khdr.svg" alt="4khdr">
+            <div class="round-container">
+                <div class="text">
+                    <h1 class="biggest-text">UNFILTERED</h1>
+                    <h2 class="medium-text">PARADISE</h2>
+                    <div class="lines">
+                        <div class="normal-text-container">
+                            <span class="line line-left"></span>
+                            <p class="normal-text">€8.95 + TAX/MO</p>
+                            <span class="line line-right"></span>
+                            <div class="image-container">
+                                <img src="img/4khdr.svg" alt="4khdr">
+                            </div>
                         </div>
                     </div>
                 </div>
+                <video class="background-video" loop muted playsinline poster="img/poster.jpg">
+                    <source src="img/" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <video class="background-video" loop muted playsinline poster="img/poster.jpg">
-                <source src="img/" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </div>
     </div>
     <div class="button-container">
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-    <div class="footer">
-        <div class="footer-logo">
-            <img src="img/logo.svg" alt="Footer Logo">
-        </div>
+    <div class="footer-logo">
+        <img src="img/logo.svg" alt="Footer Logo">
+    </div>
 
-        <div class="footer-links">
-            <a href="#" class="footer-link">Terms</a>
-            <a href="#" class="footer-link">Contact Us</a>
-        </div>
+    <div class="footer-links">
+        <a href="#" class="footer-link">Terms</a>
+        <a href="#" class="footer-link">Contact Us</a>
     </div>
 
     <div class="footer-line"></div>
@@ -161,5 +383,5 @@
             });
         });
     </script>
+
 </body>
-</html>
