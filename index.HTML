@@ -237,16 +237,38 @@
         }
 
         .footer-logo {
-            bottom: -98px; /* Adjust as needed */
-            left: 20px; /* Adjust as needed */
+            margin-right: 20px; /* Adjust margin */
+        }
+
+        .footer-logo img {
             width: 150px;
             height: auto;
         }
 
-        .footer-logo img {
-            width: 233px; /* Adjust the width as needed */
-            height: auto; /* Automatically adjust height to maintain aspect ratio */
-            margin-left: 20px;
+        .footer-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .footer-link {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: Poppins;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 20px; /* Add margin between links */
+            transition: color 0.3s; /* Add transition effect */
+        }
+
+        .footer-link:hover {
+            color: #0070FE; /* Change color on hover */
         }
 
         .footer-line {
@@ -295,32 +317,6 @@
                 text-align: right;
             }
         }
-
-        .footer-links {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-top: 20px;
-            margin-right: 20px;
-        }
-
-        .footer-link {
-            color: rgb(255, 255, 255);
-            text-align: center;
-            font-family: Poppins;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 135%;
-            text-decoration: none;
-            cursor: pointer;
-            margin-left: 20px; /* Add margin between links */
-            transition: color 0.3s; /* Add transition effect */
-        }
-
-        .footer-link:hover {
-            color: #0070FE; /* Change color on hover */
-        }
     </style>
 </head>
 <body>
@@ -355,11 +351,10 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-    <div class="footer-logo">
-        <img src="img/logo.svg" alt="Footer Logo">
-    </div>
-
     <div class="footer-links">
+        <div class="footer-logo">
+            <img src="img/logo.svg" alt="Footer Logo">
+        </div>
         <a href="#" class="footer-link">Terms</a>
         <a href="#" class="footer-link">Contact Us</a>
     </div>
@@ -385,3 +380,4 @@
     </script>
 
 </body>
+</html>
