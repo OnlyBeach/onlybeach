@@ -30,7 +30,7 @@
         }
 
         .footer-links {
-            text-align: left; /* Adjusted to left */
+            text-align: right;
         }
 
         .footer-link {
@@ -42,7 +42,7 @@
             line-height: 135%;
             text-decoration: none;
             cursor: pointer;
-            margin-right: 20px; /* Adjusted from margin-left to margin-right */
+            margin-left: 20px;
             transition: color 0.3s;
         }
 
@@ -112,8 +112,8 @@
         }
 
         .footer-links {
-            text-align: right; /* Adjusted to right */
-            padding-right: 20px; /* Adjusted from padding-left to padding-right */
+            text-align: right;
+            padding-right: 20px;
         }
 
         .footer-link {
@@ -182,6 +182,7 @@
             }
             .footer-logo {
                 margin-right: auto;
+                margin-left: 0;
             }
         }
     </style>
@@ -220,12 +221,12 @@
 
     <div class="footer-container">
         <div class="footer-table">
+            <div class="footer-table-cell footer-logo">
+                <img src="img/logo.svg" alt="Footer Logo">
+            </div>
             <div class="footer-table-cell footer-links">
                 <a href="#" class="footer-link">Terms</a>
                 <a href="#" class="footer-link">Contact Us</a>
-            </div>
-            <div class="footer-table-cell footer-logo">
-                <img src="img/logo.svg" alt="Footer Logo">
             </div>
         </div>
     </div>
