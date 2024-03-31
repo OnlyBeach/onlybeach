@@ -1,3 +1,4 @@
+User
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,53 +13,45 @@
             margin: 0;
         }
 
+        /* Adjusted logo size */
+        .footer-logo img {
+            width: 213px;
+            height: auto;
+        }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between; /* Align items to the start and end of the container */
-    align-items: center; /* Vertically center items */
-    padding: 20px 0;
-    box-sizing: border-box;
-}
+        /* Footer table styles */
+        .footer-table {
+            display: table;
+            width: 100%;
+        }
 
-.footer-logo {
-    width: 213px;
-    height: auto;
-}
+        .footer-table-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
 
-.footer-table {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+        .footer-links {
+            text-align: right;
+        }
 
-.footer-table-cell {
-    display: flex;
-    align-items: center;
-}
+        .footer-link {
+            color: rgb(255, 255, 255);
+            font-family: Poppins;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
 
-.footer-links {
-    margin-left: auto; /* Push links to the right */
-}
+        .footer-link:hover {
+            color: #0070FE;
+        }
 
-.footer-link {
-    color: rgb(255, 255, 255);
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 135%;
-    text-decoration: none;
-    cursor: pointer;
-    margin-left: 20px;
-    transition: color 0.3s;
-}
-
-.footer-link:hover {
-    color: #0070FE;
-}
-
-       
+        /* Your existing CSS styles */
         .biggest-text {
             font-family: 'Poppins', sans-serif;
         }
@@ -88,10 +81,6 @@
             margin-top: 50px;
             margin-bottom: 20px;
         }
-.footer-logo img {
-    width: 213px;
-    height: auto;
-}
 
         .main-logo img {
             max-width: 100%;
@@ -112,13 +101,16 @@
             box-sizing: border-box;
         }
 
-    
+        .footer-logo,
         .footer-links {
             display: table-cell;
             vertical-align: middle;
         }
 
-     
+        .footer-logo img {
+            max-width: 100%;
+            height: auto;
+        }
 
         .footer-links {
             text-align: right;
@@ -189,8 +181,10 @@
             .footer-links {
                 justify-content: flex-end;
             }
-        
-        
+            .footer-logo {
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -225,17 +219,17 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-  <div class="footer-container">
-    <div class="footer-table">
-        <div class="footer-table-cell footer-logo">
-            <img src="img/logo.svg" alt="Footer Logo">
-        </div>
-        <div class="footer-table-cell footer-links">
-            <a href="#" class="footer-link">Terms</a>
-            <a href="#" class="footer-link">Contact Us</a>
+    <div class="footer-container">
+        <div class="footer-table">
+            <div class="footer-table-cell footer-logo">
+                <img src="img/logo.svg" alt="Footer Logo">
+            </div>
+            <div class="footer-table-cell footer-links">
+                <a href="#" class="footer-link">Terms</a>
+                <a href="#" class="footer-link">Contact Us</a>
+            </div>
         </div>
     </div>
-</div>
 
     <div class="footer-line"></div>
 
@@ -258,4 +252,4 @@
     </script>
 
 </body>
-</html>
+</html> 
