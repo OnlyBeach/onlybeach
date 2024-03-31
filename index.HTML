@@ -236,14 +236,14 @@
             box-shadow: 0 0 4vw #00306f;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
+  .footer-links {
+    display: flex;
+    justify-content: space-between; /* Distribute items along the flex line */
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
         .footer-link {
             color: rgb(255, 255, 255);
@@ -271,13 +271,12 @@
             z-index: 30;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: flex-start; /* Change from center to flex-start */
-            align-items: center;
-            margin-top: 20px;
-            margin-left: 20px;
-        }
+     .social-icons {
+    display: flex;
+    justify-content: flex-start; /* Align social icons to the left */
+    align-items: center;
+    margin-left: 20px; /* Add space between logo and social icons */
+}
 
         .social-icons img {
             height: 17px;
@@ -292,22 +291,23 @@
         }
 .footer-logo {
     margin-right: auto; /* Pushes the footer logo to the left */
+}
 }.footer-logo img {
     max-width: 213px; /* Set the maximum width to 213px */
     height: auto; /* Allow height to adjust proportionally */
 }
-        .rights-reserved {
-            text-align: center;
-            color: rgb(183, 195, 209);
-            font-family: Rubik;
-            font-size: 19px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            z-index: 20;
-            opacity: 0.7;
-            padding-left: 20px; /* Add padding-left */
-        }
+   .rights-reserved {
+    text-align: right; /* Align "All Rights Reserved" text to the right */
+    color: rgb(183, 195, 209);
+    font-family: Rubik;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 20;
+    opacity: 0.7;
+    padding-left: 20px; /* Add padding-left */
+}
 
         @media screen and (min-width: 768px) {
             .rights-reserved {
@@ -368,7 +368,6 @@
         <img src="img/youtube.svg" alt="YouTube">
         <img src="img/twitter.svg" alt="Twitter">
     </div>
-
     <div class="rights-reserved">
         © 2024 Onlybeach. All Rights Reserved
     </div>
