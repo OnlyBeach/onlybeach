@@ -7,58 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>ONLY BEACH</title>
     <style>
-        body {
-            background-color: #000e24;
-            margin: 0;
-        }
-
-        /* Adjusted logo size */
-        .footer-logo img {
-            width: 213px;
-            height: auto;
-        }
-
-        /* Footer table styles */
-        .footer-table {
-            display: table;
-            width: 100%;
-        }
-
-        .footer-table-cell {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .footer-links {
-            text-align: right;
-        }
-
-        .footer-link {
-            color: rgb(255, 255, 255);
-            font-family: Poppins;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 135%;
-            text-decoration: none;
-            cursor: pointer;
-            margin-left: 20px;
-            transition: color 0.3s;
-        }
-
-        .footer-link:hover {
-            color: #0070FE;
-        }
-
-        /* Your existing CSS styles */
         .biggest-text {
             font-family: 'Poppins', sans-serif;
         }
-
         .medium-text {
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Button styles */
         .button {
             display: inline-flex;
             padding: 15px 60px;
@@ -75,49 +31,223 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Main logo styles */
         .main-logo {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 50px; /* Added padding from the top */
             margin-bottom: 20px;
         }
 
         .main-logo img {
             max-width: 100%;
             height: auto;
-            width: 500px;
+            width: 500px; /* Adjusted logo size */
         }
 
+        /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
             .main-logo img {
-                width: 80%;
+                width: 80%; /* Adjust as needed for smaller screens */
             }
         }
 
-        .footer-container {
-            display: table;
-            width: 100%;
+        body {
+            background-color: #000e24;
+            margin: 0;
+        }
+
+        /* Header */
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px 0;
-            box-sizing: border-box;
+            position: relative;
         }
 
-        .footer-logo,
-        .footer-links {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .footer-logo img {
+        .logo img {
             max-width: 100%;
             height: auto;
         }
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 70vh;
+            width: 70%; /* Initial width */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            padding-right: 37px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%; /* Adjust to occupy full width on smaller screens */
+                padding: 10px; /* Adjust padding if needed */
+                justify-content: center; /* Center content vertically */
+            }
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 0px;
+            background: #002d6a;
+            box-shadow: 0 0 190px #002d6a;
+            z-index: -1;
+        }
+
+        .content {
+            background-color: #020d1e;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            height: 70%;
+            margin: auto;
+            border-bottom: 1px solid #00357b;
+        }
+
+        .round-container {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
+            max-width: 100%; /* Ensure the container adjusts to the viewport */
+            height: auto; /* Allow the container to adjust its height based on content */
+        }
+
+        .background-video {
+            width: auto;
+            height: 80vh;
+            max-width: none;
+            max-height: none;
+            object-fit: cover;
+            opacity: 0.3;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text {
+            color: rgb(202, 225, 255);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 6vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: 0.8vw;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .biggest-text {
+            font-size: 4.5vw;
+        }
+
+        .medium-text {
+            font-size: 2.5vw;
+        }
+
+        .lines {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2vw 0;
+        }
+
+        .line {
+            height: 1px;
+            background-color: white;
+            width: 45%;
+        }
+
+        .normal-text-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; /* Add this line to horizontally center content */
+            margin-top: 2vw;
+            font-size: 1.5vw;
+        }
+
+        .line-left,
+        .line-right {
+            flex: 1;
+            height: 1px;
+            background-color: white;
+        }
+
+        .line-left {
+            margin-right: 2vw;
+        }
+
+        .line-right {
+            margin-left: 2vw;
+        }
+
+        .normal-text {
+            font-size: 1.5vw;
+        }
+
+        .price-icon {
+            margin-left: 2vw;
+        }
+
+        .button-container {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            margin-top: 5vw;
+            margin-bottom: 10vh;
+            z-index: 2;
+            position: relative;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #03142c;
+            border: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5vw;
+            text-align: center;
+            padding: 1vw 4vw;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            background-color: #000e24;
+            box-shadow: 0 0 4vw #00306f;
+        }
+
         .footer-links {
-            text-align: right;
-            padding-right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
         }
 
         .footer-link {
             color: rgb(255, 255, 255);
+            text-align: center;
             font-family: Poppins;
             font-size: 22px;
             font-style: normal;
@@ -125,12 +255,12 @@
             line-height: 135%;
             text-decoration: none;
             cursor: pointer;
-            margin-left: 20px;
-            transition: color 0.3s;
+            margin-left: 20px; /* Add margin between links */
+            transition: color 0.3s; /* Add transition effect */
         }
 
         .footer-link:hover {
-            color: #0070FE;
+            color: #0070FE; /* Change color on hover */
         }
 
         .footer-line {
@@ -138,12 +268,12 @@
             width: 100%;
             height: 2px;
             background-color: rgba(0, 112, 254, 0.6);
-            margin-top: 20px;
+            z-index: 30;
         }
 
         .social-icons {
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-start; /* Change from center to flex-start */
             align-items: center;
             margin-top: 20px;
             margin-left: 20px;
@@ -152,13 +282,13 @@
         .social-icons img {
             height: 17px;
             object-fit: contain;
-            margin: 0 10px;
-            transition: filter 0.3s;
-            filter: brightness(0.8);
+            margin: 0 10px; /* Adjust margin as needed */
+            transition: filter 0.3s; /* Add transition effect */
+            filter: brightness(0.8); /* Initial brightness */
         }
 
         .social-icons img:hover {
-            filter: brightness(1.2);
+            filter: brightness(1.2); /* Increase brightness on hover */
         }
 
         .rights-reserved {
@@ -169,8 +299,9 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            z-index: 20;
             opacity: 0.7;
-            padding-left: 20px;
+            padding-left: 20px; /* Add padding-left */
         }
 
         @media screen and (min-width: 768px) {
@@ -218,15 +349,13 @@
         <a href="http://patreon.com/onlybeach" class="button">Buy Now</a>
     </div>
 
-    <div class="footer-container">
-        <div class="footer-table">
-            <div class="footer-table-cell footer-logo">
-                <img src="img/logo.svg" alt="Footer Logo">
-            </div>
-            <div class="footer-table-cell footer-links">
-                <a href="#" class="footer-link">Terms</a>
-                <a href="#" class="footer-link">Contact Us</a>
-            </div>
+    <div class="footer-links">
+        <div class="footer-logo">
+            <img src="img/logo.svg" alt="Footer Logo">
+        </div>
+        <div>
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Contact Us</a>
         </div>
     </div>
 
