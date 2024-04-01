@@ -243,20 +243,23 @@
     margin-right: 20px;
     margin-left: 20px;
 }
-        .footer-link {
-            color: rgb(255, 255, 255);
-            text-align: center;
-            font-family: Poppins;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 135%;
-            text-decoration: none;
-            cursor: pointer;
-            margin-left: 20px; /* Add margin between links */
-            transition: color 0.3s; /* Add transition effect */
-        }
-
+.footer-link {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 22px; /* Adjust font size for desktop */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 20px; /* Add margin between links */
+    transition: color 0.3s; /* Add transition effect */
+}
+.footer-links-container {
+    display: flex;
+    align-items: center;
+}
         .footer-link:hover {
             color: #0070FE; /* Change color on hover */
         }
@@ -308,13 +311,17 @@
     padding-left: 20px; /* Add padding-left */
 }
 
-        @media screen and (min-width: 768px) {
-            .rights-reserved {
-                text-align: right;
-            }
-            .footer-links {
-                justify-content: flex-end;
-            }
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .footer-links-container {
+        justify-content: center; /* Center terms and conditions links */
+    }
+
+    .footer-link {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-left: 10px; /* Adjust margin for mobile */
+    }
+}
        
 
     </style>
