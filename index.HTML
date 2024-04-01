@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>ONLY BEACH</title>
     <style>
-        /* Common styles */
-        .biggest-text, .medium-text, .button {
+        .biggest-text {
             font-family: 'Poppins', sans-serif;
-            color: white;
+        }
+        .medium-text {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-flex;
+            padding: 15px 60px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: rgba(0, 112, 254, 0.6) 0px 3px 80px;
+            background: rgb(3, 11, 24);
+            border: none;
+            outline: none;
+            cursor: pointer;
             text-decoration: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
         }
 
         /* Main logo styles */
@@ -52,19 +70,19 @@
             height: auto;
         }
 
-        /* Container */
- .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto; /* Center the container horizontally */
-    width: 90%; /* Set width to 90% of the viewport */
-    max-width: 800px; /* Set maximum width to prevent overflowing */
-    padding: 10px;
-    overflow: hidden;
-    position: relative;
-    box-sizing: border-box;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 70vh;
+            width: 70%; /* Initial width */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            padding-right: 37px;
+        }
+
         @media screen and (max-width: 768px) {
             .container {
                 width: 100%; /* Adjust to occupy full width on smaller screens */
@@ -86,7 +104,6 @@
             z-index: -1;
         }
 
-        /* Content */
         .content {
             background-color: #020d1e;
             border-radius: 10px;
@@ -108,20 +125,21 @@
             height: auto; /* Allow the container to adjust its height based on content */
         }
 
- .background-video {
-    width: 100%; /* Set width to 100% */
-    height: auto; /* Allow height to adjust proportionally */
-    max-width: 100%; /* Set max-width to 100% */
-    max-height: none;
-    object-fit: cover;
-    opacity: 0.3;
-    display: block;
-    margin: 0 auto;
-}
+        .background-video {
+            width: auto;
+            height: 80vh;
+            max-width: none;
+            max-height: none;
+            object-fit: cover;
+            opacity: 0.3;
+            display: block;
+            margin: 0 auto;
+        }
 
         .text {
             color: rgb(202, 225, 255);
             text-align: center;
+            font-family: 'Poppins', sans-serif;
             font-size: 6vw;
             font-style: normal;
             font-weight: 600;
@@ -202,10 +220,13 @@
             display: inline-block;
             background-color: #03142c;
             border: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
             text-transform: uppercase;
             font-size: 1.5vw;
             text-align: center;
             padding: 1vw 4vw;
+            text-decoration: none;
             border-radius: 10px;
             transition: background-color 0.3s, box-shadow 0.3s;
         }
@@ -214,24 +235,25 @@
             background-color: #000e24;
             box-shadow: 0 0 4vw #00306f;
         }
-
-        /* Footer */
-        .footer-links {
-            display: flex;
-            justify-content: flex-start; /* Align items to the start (left) */
-            align-items: center;
-            margin-top: 20px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-
+.footer-links {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
         .footer-link {
             color: rgb(255, 255, 255);
             text-align: center;
-            font-size: 1.5vw; /* Adjust font size for smaller screens */
-            margin-left: 20px; /* Add margin between links */
+            font-family: Poppins;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%;
             text-decoration: none;
             cursor: pointer;
+            margin-left: 20px; /* Add margin between links */
             transition: color 0.3s; /* Add transition effect */
         }
 
@@ -247,12 +269,12 @@
             z-index: 30;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: flex-start; /* Align social icons to the left */
-            align-items: center;
-            margin-left: 20px; /* Add space between logo and social icons */
-        }
+     .social-icons {
+    display: flex;
+    justify-content: flex-start; /* Align social icons to the left */
+    align-items: center;
+    margin-left: 20px; /* Add space between logo and social icons */
+}
 
         .social-icons img {
             height: 17px;
@@ -265,35 +287,36 @@
         .social-icons img:hover {
             filter: brightness(1.2); /* Increase brightness on hover */
         }
-
-        .footer-logo {
-            margin-right: auto; /* Pushes the footer logo to the left */
-        }
-
-        .footer-logo img {
-            max-width: 100%; /* Set the maximum width to 100% */
-            width: 213px; /* Set a fixed width of 213px */
-            height: auto; /* Allow height to adjust proportionally */
-        }
-
-        .rights-reserved {
-            text-align: right; /* Align "All Rights Reserved" text to the right */
-            color: rgb(183, 195, 209);
-            font-size: 1.5vw; /* Adjust font size for smaller screens */
-            opacity: 0.7;
-            padding-left: 20px; /* Add padding-left */
-        }
+.footer-logo {
+    margin-right: auto; /* Pushes the footer logo to the left */
+}
+.footer-logo img {
+    max-width: 100%; /* Set the maximum width to 100% */
+    width: 213px; /* Set a fixed width of 213px */
+    height: auto; /* Allow height to adjust proportionally */
+}
+   .rights-reserved {
+    text-align: right; /* Align "All Rights Reserved" text to the right */
+    color: rgb(183, 195, 209);
+    font-family: Rubik;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 20;
+    opacity: 0.7;
+    padding-left: 20px; /* Add padding-left */
+}
 
         @media screen and (min-width: 768px) {
             .rights-reserved {
                 text-align: right;
-                font-size: 19px; /* Revert font size for larger screens */
             }
-
             .footer-links {
                 justify-content: flex-end;
             }
-        }
+       
+
     </style>
 </head>
 <body>
@@ -344,7 +367,6 @@
         <img src="img/youtube.svg" alt="YouTube">
         <img src="img/twitter.svg" alt="Twitter">
     </div>
-
   
 
     <script>
@@ -355,5 +377,6 @@
             });
         });
     </script>
+
 </body>
 </html>
