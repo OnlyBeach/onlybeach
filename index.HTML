@@ -322,6 +322,19 @@ padding-left: 10px;
     width: 213px; /* Set a fixed width of 213px */
     height: auto; /* Allow height to adjust proportionally */
 }
+
+@media screen and (max-width: 768px) {
+    .normal-text-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-top: 10px; /* Adjust spacing between text and image */
+    }
+}
+
    .rights-reserved {
     text-align: right; /* Align "All Rights Reserved" text to the right */
     color: rgb(183, 195, 209);
@@ -351,7 +364,7 @@ padding-left: 10px;
     </style>
 </head>
 <body>
-    <div class="container">
+       <div class="container">
         <div class="main-logo">
             <img src="img/logo.svg" alt="Main Logo">
         </div>
@@ -364,10 +377,10 @@ padding-left: 10px;
                         <div class="normal-text-container">
                             <span class="line line-left"></span>
                             <p class="normal-text">€8.95 + TAX/MO</p>
-                            <span class="line line-right"></span>
-                            <div class="image-container"><br>
-                              <Br>  <img src="img/4khdr.svg" alt="4khdr">
+                            <div class="image-container">
+                                <img src="img/4khdr.svg" alt="4khdr">
                             </div>
+                            <span class="line line-right"></span>
                         </div>
                     </div>
                 </div>
