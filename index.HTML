@@ -133,14 +133,16 @@ padding-left: 10px;
 
 
 .round-container {
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-            margin: auto;
-            box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
-            max-width: 100%; /* Ensure the container adjusts to the viewport */
-            height: auto; /* Allow the container to adjust its height based on content */
-        }
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: auto; /* Center vertically */
+    box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
+    max-width: 100%; /* Ensure the container adjusts to the viewport */
+    height: auto; /* Allow the container to adjust its height based on content */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
 @media screen and (min-width: 769px) {
     .round-container {
         width: 70%; /* Adjusted width for larger screens */
