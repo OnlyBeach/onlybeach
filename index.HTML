@@ -206,8 +206,9 @@ padding-left: 10px;
         }
 
         .normal-text {
-            font-size: 1.5vw;
-        }
+        width: 100%; /* Allow text to take full width */
+        text-align: center; /* Center the text */
+    }
 
         .price-icon {
             margin-left: 2vw;
@@ -280,10 +281,10 @@ padding-left: 10px;
     margin-right: auto;
 }
 
-.image-container img {
-    width: 100%; /* Ensure the image fills its container */
-    height: auto; /* Maintain aspect ratio */
-}
+   .image-container {
+        width: 100%; /* Allow image to take full width */
+        margin-top: 10px; /* Adjust spacing between text and image */
+    }
         .footer-link:hover {
             color: #0070FE; /* Change color on hover */
         }
