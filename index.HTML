@@ -190,14 +190,6 @@ padding-left: 10px;
             font-size: 1.5vw;
         }
 
-@media screen and (min-width: 769px) {
-    .biggest-text,
-    .medium-text {
-        max-width: 60%; /* Set maximum width for text elements */
-        margin: 0 auto; /* Center the text horizontally */
-max-height: 50px;
-    }
-
         .line-left,
         .line-right {
             flex: 1;
@@ -214,9 +206,8 @@ max-height: 50px;
         }
 
         .normal-text {
-        width: 100%; /* Allow text to take full width */
-        text-align: center; /* Center the text */
-    }
+            font-size: 1.5vw;
+        }
 
         .price-icon {
             margin-left: 2vw;
@@ -289,10 +280,10 @@ max-height: 50px;
     margin-right: auto;
 }
 
-   .image-container {
-        width: 100%; /* Allow image to take full width */
-        margin-top: 10px; /* Adjust spacing between text and image */
-    }
+.image-container img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+}
         .footer-link:hover {
             color: #0070FE; /* Change color on hover */
         }
@@ -331,19 +322,6 @@ max-height: 50px;
     width: 213px; /* Set a fixed width of 213px */
     height: auto; /* Allow height to adjust proportionally */
 }
-
-@media screen and (max-width: 768px) {
-    .normal-text-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .image-container {
-        margin-top: 10px; /* Adjust spacing between text and image */
-    }
-}
-
    .rights-reserved {
     text-align: right; /* Align "All Rights Reserved" text to the right */
     color: rgb(183, 195, 209);
