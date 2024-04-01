@@ -9,11 +9,12 @@
     <style>
         .biggest-text {
             font-family: 'Poppins', sans-serif;
+            text-align: center;
             font-size: 4.5vw;
         }
-        
         .medium-text {
             font-family: 'Poppins', sans-serif;
+            text-align: center;
             font-size: 2.5vw;
         }
 
@@ -32,34 +33,28 @@
             text-decoration: none;
             color: white;
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5vw;
-            text-transform: uppercase;
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .button:hover {
-            background-color: #000e24;
-            box-shadow: 0 0 4vw #00306f;
         }
 
         /* Main logo styles */
-        .main-logo {
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-        }
+     .main-logo {
+    text-align: center;
+    margin-top: 50px; /* Added padding from the top */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
 
         .main-logo img {
             max-width: 100%;
             height: auto;
-            width: 500px;
+            width: 500px; /* Adjusted logo size */
         }
 
+        /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
             .main-logo img {
-                width: 80%;
+                width: 80%; /* Adjust as needed for smaller screens */
+padding-left: 10px;
             }
         }
 
@@ -81,8 +76,7 @@
             max-width: 100%;
             height: auto;
         }
-
-        .background-video {
+  .background-video {
             width: auto;
             height: 80vh;
             max-width: none;
@@ -92,37 +86,36 @@
             display: block;
             margin: 0 auto;
         }
+     .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    width: 70%; /* Adjusted width to fit the screen */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    padding-right: 37px;
+}
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 70vh;
-            width: 70%;
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-            padding: 10px;
-            padding-right: 37px;
-        }
+@media screen and (min-width: 769px) {
+    .container {
+        width: 70%; /* Adjusted width for larger screens */
+    }
+    .round-container {
+        width: 100%; /* Adjusted width for larger screens */
+    }
+}
 
-        @media screen and (min-width: 769px) {
-            .container {
-                width: 70%;
-            }
-            .round-container {
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-            .round-container {
-                width: 100%;
-            }
-        }
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+    .round-container {
+        width: 100%; /* Adjusted width for smaller screens */
+    }
+}
 
         .container::before {
             content: "";
@@ -137,25 +130,46 @@
             z-index: -1;
         }
 
-        .round-container {
+
+
+.round-container {
             border-radius: 10px;
             overflow: hidden;
             position: relative;
             margin: auto;
             box-shadow: 0 0 30px #002d6a, 0 0 20px #002d6a inset;
-            max-width: 100%;
-            height: auto;
+            max-width: 100%; /* Ensure the container adjusts to the viewport */
+            height: auto; /* Allow the container to adjust its height based on content */
         }
+@media screen and (min-width: 769px) {
+    .round-container {
+        width: 70%; /* Adjusted width for larger screens */
+    }
+}
 
         .text {
             color: rgb(202, 225, 255);
             text-align: center;
             font-family: 'Poppins', sans-serif;
+            font-size: 6vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: 0.8vw;
+            text-transform: uppercase;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
+        }
+
+        .biggest-text {
+            font-size: 4.5vw;
+        }
+
+        .medium-text {
+            font-size: 2.5vw;
         }
 
         .lines {
@@ -175,17 +189,24 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Add this line to horizontally center content */
             margin-top: 2vw;
             font-size: 1.5vw;
         }
 
-        .text-line {
+        .line-left,
+        .line-right {
             flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            height: 1px;
+            background-color: white;
+        }
+
+        .line-left {
+            margin-right: 2vw;
+        }
+
+        .line-right {
+            margin-left: 2vw;
         }
 
         .normal-text {
@@ -193,50 +214,82 @@
         }
 
         .price-icon {
-            height: 2vw;
+            margin-left: 2vw;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 20px;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-
-        .footer-link {
-            color: rgb(255, 255, 255);
+        .button-container {
+            width: 40%;
+            margin: auto;
             text-align: center;
-            font-family: Poppins;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 135%;
-            text-decoration: none;
-            cursor: pointer;
-            margin-left: 20px;
-            transition: color 0.3s;
+            margin-top: 5vw;
+            margin-bottom: 10vh;
+            z-index: 2;
+            position: relative;
         }
 
-        .footer-links-container {
-            display: flex;
-            align-items: center;
-        }
+    .button {
+    display: inline-block;
+    background-color: #03142c;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5vw; /* Initial font size */
+    text-align: center;
+    padding: 1vw 4vw; /* Initial padding */
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
 
-        .image-container {
-            width: 20%;
-            margin-left: auto;
-            margin-right: auto;
-        }
+@media screen and (max-width: 768px) {
+    .button {
+        font-size: 16px; /* Increase font size for mobile */
+        padding: 20px 40px; /* Increase padding for mobile */
+    }
+}
 
-        .image-container img {
-            width: 100%;
-            height: auto;
+        .button:hover {
+            background-color: #000e24;
+            box-shadow: 0 0 4vw #00306f;
         }
+.footer-links {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.footer-link {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 22px; /* Adjust font size for desktop */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 20px; /* Add margin between links */
+    transition: color 0.3s; /* Add transition effect */
+}
+.footer-links-container {
+    display: flex;
+    align-items: center;
+}
+.image-container {
+    width: 20%; /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.image-container img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+}
         .footer-link:hover {
-            color: #0070FE;
+            color: #0070FE; /* Change color on hover */
         }
 
         .footer-line {
@@ -247,58 +300,58 @@
             z-index: 30;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin-left: 20px;
-        }
+     .social-icons {
+    display: flex;
+    justify-content: flex-start; /* Align social icons to the left */
+    align-items: center;
+    margin-left: 20px; /* Add space between logo and social icons */
+}
 
         .social-icons img {
             height: 17px;
             object-fit: contain;
-            margin: 0 10px;
-            transition: filter 0.3s;
-            filter: brightness(0.8);
+            margin: 0 10px; /* Adjust margin as needed */
+            transition: filter 0.3s; /* Add transition effect */
+            filter: brightness(0.8); /* Initial brightness */
         }
 
         .social-icons img:hover {
-            filter: brightness(1.2);
+            filter: brightness(1.2); /* Increase brightness on hover */
         }
+.footer-logo {
+    margin-right: auto; /* Pushes the footer logo to the left */
+}
+.footer-logo img {
+    max-width: 100%; /* Set the maximum width to 100% */
+    width: 213px; /* Set a fixed width of 213px */
+    height: auto; /* Allow height to adjust proportionally */
+}
+   .rights-reserved {
+    text-align: right; /* Align "All Rights Reserved" text to the right */
+    color: rgb(183, 195, 209);
+    font-family: Rubik;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 20;
+    opacity: 0.7;
+    padding-left: 20px; /* Add padding-left */
+}
 
-        .footer-logo {
-            margin-right: auto;
-        }
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .footer-links-container {
+        justify-content: center; /* Center terms and conditions links */
+    }
 
-        .footer-logo img {
-            max-width: 100%;
-            width: 213px;
-            height: auto;
-        }
+    .footer-link {
+        font-size: 12px; /* Adjust font size for mobile */
+        margin-left: 10px; /* Adjust margin for mobile */
+    }
+}
+       
 
-        .rights-reserved {
-            text-align: right;
-            color: rgb(183, 195, 209);
-            font-family: Rubik;
-            font-size: 19px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            z-index: 20;
-            opacity: 0.7;
-            padding-left: 20px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .footer-links-container {
-                justify-content: center;
-            }
-
-            .footer-link {
-                font-size: 12px;
-                margin-left: 10px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -313,14 +366,11 @@
                     <h2 class="medium-text">PARADISE</h2>
                     <div class="lines">
                         <div class="normal-text-container">
-                            <div class="text-line">
-                                <span class="line"></span>
-                            </div>
-                            <div class="text-line">
-                                <span class="normal-text">€8.95 + TAX/MO</span>
-                            </div>
-                            <div class="text-line">
-                                <img src="img/4khdr.svg" alt="4khdr" class="price-icon">
+                            <span class="line line-left"></span>
+                            <p class="normal-text">€8.95 + TAX/MO</p>
+                            <span class="line line-right"></span>
+                            <div class="image-container"><br>
+                              <Br>  <img src="img/4khdr.svg" alt="4khdr">
                             </div>
                         </div>
                     </div>
@@ -347,12 +397,13 @@
     </div>
 
     <div class="footer-line"></div>
-
+<br>
     <div class="social-icons">
         <img src="img/youtube.svg" alt="YouTube">
         <img src="img/twitter.svg" alt="Twitter">
     </div>
-
+  
+<br>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var video = document.querySelector('.background-video');
@@ -361,5 +412,6 @@
             });
         });
     </script>
+
 </body>
 </html>
