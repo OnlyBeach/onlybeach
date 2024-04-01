@@ -216,20 +216,27 @@
             position: relative;
         }
 
-        .button {
-            display: inline-block;
-            background-color: #03142c;
-            border: none;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            text-transform: uppercase;
-            font-size: 1.5vw;
-            text-align: center;
-            padding: 1vw 4vw;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
+    .button {
+    display: inline-block;
+    background-color: #03142c;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5vw; /* Initial font size */
+    text-align: center;
+    padding: 1vw 4vw; /* Initial padding */
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        font-size: 20px; /* Increase font size for mobile */
+        padding: 20px 60px; /* Increase padding for mobile */
+    }
+}
 
         .button:hover {
             background-color: #000e24;
